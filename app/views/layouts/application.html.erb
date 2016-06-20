@@ -5,7 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var f=$('#banner');
+			f.load(function(){ 
+				f.contents().find('.ui-bar-a').hide(); 
+			});
+		});
+	</script>
 </head>
+
 <body>
 
 <%= yield %>
