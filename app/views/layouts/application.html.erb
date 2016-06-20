@@ -7,7 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <div class="row">
+      <div class="logo-container">
+        <a href="/"><span>GOT</span></a>
+      </div>
+      <div class="right-panel">
+        <a href="" style="display: inline;">Log In</a>
+        <a href="" style="display: inline;">Create Account</a>
+      </div>
+    </div>
+  </header>
 
+  
 <%= yield %>
 
 </body>
