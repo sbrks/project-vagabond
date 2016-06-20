@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  root to: "#home"
 
-root to: "test#index"
 
-get "/test", to: "test#index"
+  #sign_in
+  get "/sign_in", to: "sessions#new"
+  post "/sessions", to: "sessions#create"
 
 end
