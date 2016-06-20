@@ -16,6 +16,8 @@ class UsersController < ApplicationController
 		if @user.save
 			#login user
 			session[:user_id] = @user.id
+			# tell the UserMailer to send a welcome email after save
+			UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
 			redirect_to @user, flash: { success: "Successfully signed up!"}
 
