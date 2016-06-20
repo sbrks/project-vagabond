@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   get "/users", to: "users#index"
 
+  get "/users/new", to: "users#new"
+
+  post "/users", to: "users#create"
+
   #sign_in
   get "/sign_in", to: "sessions#new"
 
@@ -16,4 +20,6 @@ Rails.application.routes.draw do
   #sign up
   get "/sign_up", to: "users#new", as: "sign_up"
 
+  resources :users, only: [:new, :create, :show, :index]
+  
 end
