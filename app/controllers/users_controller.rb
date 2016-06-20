@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 #only logged in users can see profile pages
-before_action :require_login, only: :show
+# before_action :require_login, only: :show
+
 	#renders home page
 	def index
 		render :index
@@ -17,6 +18,7 @@ before_action :require_login, only: :show
 			session[:user_id] = @user.id
 			#redirect to user#show w/ success message
 			redirect_to @user, flash: { success: "Successfully signed up!"}
+
 		else
 			#there was an error, go back to signup page and display message
 			redirect_to sign_up_path, flash: { error: @user.errors.full_messages.to_sentence }
@@ -32,7 +34,7 @@ before_action :require_login, only: :show
 	private
 
 	def user_params
-		params.require(:user).permit(:email, :password)
+		params.require(:user).permit(:email, :password, :username)
 	end
 
 end
