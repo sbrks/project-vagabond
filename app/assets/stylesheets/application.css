@@ -38,10 +38,12 @@
  .logo-container a {
    text-decoration: none;
    color: #848484;
+   font-size: 1em;
  }
  .right-panel a {
    text-decoration: none;
    color: #848484;
+   font-size: 1em;
  }
  #login {
    margin-right: 15px;
