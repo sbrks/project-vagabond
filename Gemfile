@@ -24,7 +24,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
+<<<<<<< HEAD
 gem 'bcrypt', '~> 3.1.7'
+=======
+ gem 'bcrypt', '~> 3.1.7'
+>>>>>>> b8011385d1540d1d7a8556ca53213c009b288666
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -32,9 +36,11 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'pry-byebug'
 end
 
 group :development do
