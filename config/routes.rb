@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   post "/users", to: "users#create"
 
+  #user profile page
+  get "/users/:id", to:"users#show"
+
+
   #sign_in
   get "/sign_in", to: "sessions#new"
 
