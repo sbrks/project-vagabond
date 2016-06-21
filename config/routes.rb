@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   #user profile page
   # get "/users/:id", to:"users#show"
 
+  get "/sign_up", to: "users#create"
+
 
   #sign_in
   get "/login", to: "sessions#new"
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   #edit user profile
-  get "/users/edit", to: "users#edit"
+  get "/users/:id/edit", to: "users#edit"
 
   #view posts in city profile
   get "/cities/:city_id/posts", to: "city#posts_index", as: "index_posts"
@@ -28,6 +30,6 @@ Rails.application.routes.draw do
   #view new post form
   get "/cities/:city_id/new_post", to: "city#new_post", as: "post"
 
-  resources :users, only: [:new, :create, :show, :index]
+  resources :users, only: [:new, :create, :show, :index, :edit]
 
 end
