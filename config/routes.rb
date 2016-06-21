@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #user profile page
   # get "/users/:id", to:"users#show"
 
-  get "/sign_up", to: "users#create"
+  
 
 
   #sign_in

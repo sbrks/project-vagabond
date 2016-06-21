@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 #only logged in users can see profile pages
- before_filter :authorize
+ # before_filter :authorize
 
 	#renders home page
 	def index
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+		render :new
 	end
 
 	def create
@@ -20,11 +21,11 @@ class UsersController < ApplicationController
 			# tell the UserMailer to send a welcome email after save
 			#UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
-			redirect_to "/", flash: { success: "Successfully signed up!"}
+			redirect_to "/users", flash: { success: "Successfully signed up!"}
 
 		else
 			# there was an error, go back to signup page and display message
-			redirect_to "/signup", flash: { error: @user.errors.full_messages.to_sentence }
+			redirect_to "/signup", flash: { error: user.errors.full_messages.to_sentence }
 		end
 	end
 
