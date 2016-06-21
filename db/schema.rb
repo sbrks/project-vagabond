@@ -11,16 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
-ActiveRecord::Schema.define(version: 20160621020734) do
->>>>>>> eed6ace35bdfa15ca555b9379757896a9b59a062
->>>>>>> master
+ActiveRecord::Schema.define(version: 20160621061213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -28,6 +35,10 @@ ActiveRecord::Schema.define(version: 20160621020734) do
     t.string   "username"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
     t.string   "location"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
