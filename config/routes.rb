@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post "/users", to: "users#create"
 
   #user profile page
-  # get "/users/:id", to:"users#show"
+  get "/users/:id", to:"users#show"
 
   get "/sign_up", to: "users#create"
 
@@ -21,9 +21,10 @@ Rails.application.routes.draw do
   #logout
   delete "/sessions", to: "sessions#destroy"
 
-  #edit user profile
+  #edit user profile, returns edit form for editing profile
   get "/users/:id/edit", to: "users#edit"
 
+  #update user
   patch "/users/:id", to: "users#update"
 
 
