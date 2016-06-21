@@ -24,12 +24,15 @@ Rails.application.routes.draw do
   #edit user profile
   get "/users/:id/edit", to: "users#edit"
 
+  patch "/users/:id", to: "users#update"
+
+
   #view posts in city profile
   get "/cities/:city_id/posts", to: "city#posts_index", as: "index_posts"
 
   #view new post form
   get "/cities/:city_id/new_post", to: "city#new_post", as: "post"
 
-  resources :users, only: [:new, :create, :show, :index, :edit]
+  resources :users, only: [:new, :create, :show, :index, :edit, :update]
 
 end
