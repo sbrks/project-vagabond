@@ -15,3 +15,18 @@
  *= require normalize
  *= require skeleton
  */
+
+ header {
+   width: 100%;
+ }
+
+ #row {
+   display: block;
+ }
+ .logo-container {
+   position: relative;
+   left: 10%;
+ }
+ .right-panel {
+   position: relative;
+ }
