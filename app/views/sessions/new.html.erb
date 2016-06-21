@@ -1,6 +1,6 @@
 <h1>Login</h1>
 
-<%= form_tag sessions_path, method: "post" do %>
+<%= form_tag "/login", method: "post" do %>
 	<span>Email: </span><br>
 	<%= text_field_tag :email, nil, required: true %><br>
 	<span>Password: </span><br>
