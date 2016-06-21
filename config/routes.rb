@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post "/users", to: "users#create"
 
   #user profile page
-  get "/users/:id", to:"users#show"
+  # get "/users/:id", to:"users#show"
 
 
   #sign_in
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   #logout
   delete "/sessions", to: "sessions#destroy"
 
+  #edit user profile
+  get "/users/edit", to: "users#edit"
 
   #view posts in city profile
   get "/cities/:city_id/posts", to: "city#posts_index", as: "index_posts"
