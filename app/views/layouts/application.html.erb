@@ -17,8 +17,12 @@
     </div>
     <div class="nine columns">
       <div class="right-panel">
-        <a href="/sign_in" style="display: inline;" id="login">Log In</a>
-        <a href="/users/new" style="display: inline;">Create Account</a>
+        <% if current_user %>
+        Welcome <%= current_user.username %>  <%= link_to "Logout", '/logout', method: "DELETE" %>
+        <% else %>
+        <a href="/login" style="display: inline;" id="login">Log In</a>
+        <a href="/signup" style="display: inline;">Create Account</a>
+        <% end %>
       </div>
     </div>
   </div>

@@ -3,24 +3,20 @@ module SessionsHelper
   def login(user)
     session[:user_id] = user.id
     @current_user = user
-    redirect_to "/sessions"
-  end
-
-  def current_user
-    @current_user ||= User.find(session[:user_id])
+    redirect_to "/users"
   end
 
   def logged_in?
     if current_user == nil
-      redirect_to "/sign_in"
+      redirect_to "/login"
     else
-      redirect_to "/sessions"
+      redirect_to "/users"
     end
   end
 
   def logout
     @current_user = session[:user_id] = nil
-    redirect_to "/"
+    redirect_to "/logout"
   end
 
 end

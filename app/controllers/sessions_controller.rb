@@ -2,8 +2,6 @@ class SessionsController < ApplicationController
 	include SessionsHelper
 
 	def new
-		#TODO: render a login view
-		redirect_to @current_user if @current_user
 	end
 
 	def create
@@ -13,10 +11,10 @@ class SessionsController < ApplicationController
 			#this creates the session, logging in the user
 			session[:user_id] = user.id
 			#redirect to show page
-			redirect_to user_path(user.id)
+			redirect_to "/"
 		else
 			#if there's an error logging user in
-			redirect_to "/sign_in"#login path
+			redirect_to "/login"#login path
 		end
 	end
 
