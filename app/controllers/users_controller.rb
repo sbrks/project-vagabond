@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
 	#renders home page
 	def index
+		@users = User.all
 		render :index
 	end
 
