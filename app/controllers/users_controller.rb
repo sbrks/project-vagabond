@@ -23,26 +23,51 @@ class UsersController < ApplicationController
 			#redirect to user#show w/ success message
 			redirect_to "/users", flash: { success: "Successfully signed up!"}
 
+
+			# tell the UserMailer to send a welcome email after save
+			# UserMailer.welcome_email(@user).deliver_later
+			# #redirect to user#show w/ success message
+
+
+
 		else
 			# there was an error, go back to signup page and display message
 			redirect_to "/signup", flash: { error: user.errors.full_messages.to_sentence }
 		end
 	end
 
-	def edit
+
+	def show
 		@user = User.find(params[:id])
 	end
+
 
 
 	# def show
 	# 	@user = User.find(params[:id])
 	# end
 
+	#edit user profile
+	def edit
+		@user = User.find(params[:id])
+	end
+
+
+	#update user profile photo
+	def update
+		@user = User.find(params[:id])
+		# @user.update_attribute(:avatar, params[:user][:avatar])
+		if @user.update_attribute(:avatar, params[:user][:avatar])
+		flash[:success] = "Photo updated"
+		else
+			redirect_to @user
+		end
+	end
 
 	private
 
 	def user_params
-		params.require(:user).permit(:email, :password, :username, :location)
+		params.require(:user).permit(:email, :password, :username, :avatar, :location)
 	end
 
 end
