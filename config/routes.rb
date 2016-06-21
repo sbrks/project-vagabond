@@ -2,11 +2,14 @@ Rails.application.routes.draw do
 
   root to: "users#index"
   #need to write home method in users controller
-
   
   get "/users/new", to: "users#new"
 
   post "/users", to: "users#create"
+
+  #user profile page
+  # get "/users/:id", to:"users#show"
+
 
   #sign_in
   get "/sign_in", to: "sessions#new"
@@ -16,8 +19,8 @@ Rails.application.routes.draw do
   #logout
   delete "/sessions", to: "sessions#destroy"
 
-  #sign up
-  get "/sign_up", to: "users#new", as: "sign_up"
+  #edit user profile
+  get "/users/edit", to: "users#edit"
 
   #view posts in city profile
   get "/cities/:city_id/posts", to: "city#posts_index", as: "index_posts"
