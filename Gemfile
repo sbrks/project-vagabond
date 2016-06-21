@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
