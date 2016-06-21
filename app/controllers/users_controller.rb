@@ -16,15 +16,15 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			#login user
-			session[:user_id] = @user.id
+			session[:user_id] = user.id
 			# tell the UserMailer to send a welcome email after save
 			UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
-			redirect_to @user, flash: { success: "Successfully signed up!"}
+			redirect_to "/sessions", flash: { success: "Successfully signed up!"}
 
 		else
 			#there was an error, go back to signup page and display message
-			redirect_to sign_up_path, flash: { error: @user.errors.full_messages.to_sentence }
+			redirect_to sign_in_path, flash: { error: @user.errors.full_messages.to_sentence }
 		end
 	end
 
