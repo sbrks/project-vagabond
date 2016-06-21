@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post "/users", to: "users#create"
 
   #user profile page
-  get "/users/:id", to:"users#show"
+  get "/users/:id", to:"users#show", as: "user_path"
 
 
 

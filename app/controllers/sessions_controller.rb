@@ -11,10 +11,11 @@ class SessionsController < ApplicationController
 			#this creates the session, logging in the user
 			session[:user_id] = user.id
 			#redirect to show page
-			redirect_to "/"
+			redirect_to root_path #TODO: redirect to user_path
+
 		else
 			#if there's an error logging user in
-			redirect_to "/login"#login path
+			redirect_to "/login", flash: { error: user.errors.full_messages.to_sentence }
 		end
 	end
 
