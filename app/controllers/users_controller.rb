@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
 
 			# tell the UserMailer to send a welcome email after save
-			# UserMailer.welcome_email(@user).deliver_later
+			UserMailer.welcome_email(user).deliver_now
 			# #redirect to user#show w/ success message
 
 		else
