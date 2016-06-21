@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-<<<<<<< HEAD
-=======
   has_many :city_posts
   has_many :users, through: :city_posts
 
@@ -13,6 +11,4 @@ class PostsController < ApplicationController
     @post = Post.new
     render :new
   end
-
->>>>>>> master
 end

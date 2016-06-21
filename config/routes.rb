@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "users#index"
   #need to write home method in users controller
 
+  get "/users/new", to: "users#new"
+
   get "/signup", to: "users#new", as: "new_user"
 
   post "/users", to: "users#create"
@@ -35,4 +37,5 @@ Rails.application.routes.draw do
   get "/cities/:city_id/new_post", to: "city#new_post", as: "post"
 
   resources :users, only: [:new, :create, :show, :index, :edit, :update]
+
 end
