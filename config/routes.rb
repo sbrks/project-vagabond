@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
 
   root to: "users#index"
   #need to write home method in users controller
-  
+
   get "/users/new", to: "users#new"
 
   post "/users", to: "users#create"
@@ -32,15 +30,6 @@ Rails.application.routes.draw do
   #view new post form
   get "/cities/:city_id/new_post", to: "city#new_post", as: "post"
 
-<<<<<<< HEAD
-  resources :users, only: [:new, :create, :show, :index]
-<<<<<<< HEAD
->>>>>>> b8011385d1540d1d7a8556ca53213c009b288666
-  
-=======
-=======
   resources :users, only: [:new, :create, :show, :index, :edit]
->>>>>>> master
 
->>>>>>> master
 end
