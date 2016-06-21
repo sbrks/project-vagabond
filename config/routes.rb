@@ -19,6 +19,12 @@ Rails.application.routes.draw do
   #sign up
   get "/sign_up", to: "users#new", as: "sign_up"
 
+  #view posts in city profile
+  get "/cities/:city_id/posts", to: "city#posts_index", as: "index_posts"
+
+  #view new post form
+  get "/cities/:city_id/new_post", to: "city#new_post", as: "post"
+
   resources :users, only: [:new, :create, :show, :index]
 
 end
