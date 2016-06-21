@@ -1,8 +1,6 @@
 <!--users/views/edit.html.erb-->
-<% provide(:title, 'Edit user') %>
-<% provide(:button_text, 'Save changes') %>
-<div class="container">
-<h1>Edit Your Profile</h1>
-<hr>
-<%= render "form" %>
-</div>
+
+
+<%= form_for @user, url: users_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %>
