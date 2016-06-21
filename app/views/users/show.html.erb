@@ -17,4 +17,19 @@
 	</div>
 </div>
 
+<div>
+
+
+
+<%= form_for @user, html: { multipart: true } do |form| %>
+  <%= form.file_field :avatar %>
+</div>
+
+<div class="form-group">
+	<%= form.submit "Change Photo", class: "btn btn-block btn-success" %>
+</div>
+
+
+
+<% end %>
 </div>
