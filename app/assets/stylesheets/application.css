@@ -86,8 +86,7 @@
 
  /* Slide 2 */
 
-#slide-2 .bcg {background-image: url('https://shirtpunchcdn.s3.amazonaws.com/catalog/category/GameOfThrones_Logo.png')}
-#slide-2 .hsContent {
+#slide-2 .bcg {
     margin-left: -450px;
     top: auto;
   }

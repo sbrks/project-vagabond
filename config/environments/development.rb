@@ -1,4 +1,5 @@
 Rails.application.configure do
+  BetterErrors::Middleware.allow_ip! ENV['TRUSTED_IP'] if ENV['TRUSTED_IP']
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -35,6 +36,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+  config.serve_static_assets = false
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

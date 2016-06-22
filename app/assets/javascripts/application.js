@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //=Init Skroller
+//= require users.js
 //= require_tree .
