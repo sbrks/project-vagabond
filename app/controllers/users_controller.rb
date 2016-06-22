@@ -21,21 +21,18 @@ class UsersController < ApplicationController
 			# tell the UserMailer to send a welcome email after save
 			#UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
-<<<<<<< HEAD
+			# redirect_to "users/:id", flash: { success: "Successfully signed up!"}
+			# render :index
+
+
+
+			# tell the UserMailer to send a welcome email after save
+			UserMailer.welcome_email(user).deliver_now
+			# #redirect to user#show w/ success message
 			redirect_to "/users", flash: { success: "Successfully signed up!"}
 			# tell the UserMailer to send a welcome email after save
 			UserMailer.welcome_email(user).deliver_now
 			# #redirect to user#show w/ success message
-=======
-			# redirect_to "users/:id", flash: { success: "Successfully signed up!"}
-			render :index
-
-
-			# tell the UserMailer to send a welcome email after save
-			UserMailer.welcome_email(user).deliver_now
-			# #redirect to user#show w/ success message
-
->>>>>>> cf3710464c4fa820c23841136221d01e47358141
 		else
 			# there was an error, go back to signup page and display message
 			redirect_to "/signup", flash: { error: user.errors.full_messages.to_sentence }
@@ -44,8 +41,6 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-
-
 	end
 
 	#edit user profile

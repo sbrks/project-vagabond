@@ -3,10 +3,8 @@
   <ul>
     <li><%= @city.name %></li>
     <% @posts.each do |post| %>
-    <li><%= post.title %></li>
-    <li><%= post.id %></li>
-    <li><%= current_user.id%></li>
-    <%= link_to "Delete", delete_path, method: :delete %>
+    <li>Title: <%= post.title %></li>
+    <li>Post id: <%= post.id %></li>
     <% end %>
   </ul>
 </div>
