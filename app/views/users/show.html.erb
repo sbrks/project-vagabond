@@ -1,5 +1,8 @@
 <!-- app/views/users/show.html.erb -->
-
+<head><script>
+UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
+</script>
+</head>
 <div class="container">
   <h1>Welcome, <%= link_to @user.username %></h1>
    <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
@@ -23,4 +26,53 @@
   <% end %>
   <div class="button" id="make-post">Make Post</div>
   <div class="button" id="all-posts">All Posts</div>
+</div>
+<h1>Welcome, <%= link_to @user.username %></h1>
+ <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
+
+<!-- edit profile button -->
+<div class="button">
+<%= link_to "Edit Profile", edit_path(@user) %>
+</div>
+
+<!--user photo div -->
+ <div class="row">
+  	<div class="four columns">
+		<img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
+
+		<div id="button submit">
+		<%= form_for @user do |form| %>
+
+		</div>
+
+		<div id="button upload">
+		<h6>Change Photo
+		<img src="">
+
+		<img src="#ucarecdnlink" >
+		<input type="hidden" role="uploadcare-uploader" name="my_file" /></h6>
+		</div>
+
+	<% end %>
+</div>
+
+<!--user info div -->
+ 	<div class="four columns">
+		<p><b>Username: </b><%= @user.username %></p>
+		<p><b>Location: </b><%= @user.location %></p>
+		<p><b>Email: </b><%= @user.email %></p>
+
+
+
+	</div>
+
+<!--user post div -->
+	<div class="four columns">
+  	<h3><b>Recent Posts</b></h3>
+	</div>
+</div>
+
+<div>
+
+
 </div>
