@@ -9,15 +9,15 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @city = City.find(params[:id])
-    @ben = current_user
     render :new
   end
 
   def create
-    post_params = params.require(:posts).permit(:title, :description, :users_id, :post_id)
-    @post = Post.create(post_params)
-    @city = City.find(params[:id])
-    redirect_to "/cities/#{@city.id}/posts"
+    params[:posts][:user_id] = current_user.id
+    post_params = params.require(:posts).permit(:title, :description, :user_id)
+    Post.create(post_params)
+    city = City.find(params[:id])
+    redirect_to "/cities/#{city.id}/posts"
   end
 
   def show
@@ -25,10 +25,16 @@ class PostsController < ApplicationController
     render :show
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    render :edit
+  end
+
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
-    redirect_to "/users"
+    p params
+    ben = Post.find(params[:id])
+    ben.destroy
+    redirect_to "/posts"
   end
 
 end

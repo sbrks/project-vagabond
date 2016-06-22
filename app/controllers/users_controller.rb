@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 #only logged in users can see profile pages
  # before_filter :authorize
+ 	before_action :logged_in?, only: [:edit, :update, :delete]
+ 	before_action :current_user, only: [:show]
 
 	#renders home page
 	def index
@@ -22,7 +24,8 @@ class UsersController < ApplicationController
 			#UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
 			# redirect_to "users/:id", flash: { success: "Successfully signed up!"}
-			render :index
+			# render :index
+
 
 
 			# tell the UserMailer to send a welcome email after save
@@ -40,8 +43,6 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-
-
 	end
 
 	#edit user profile
