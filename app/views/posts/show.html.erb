@@ -1,0 +1,11 @@
+<div class="container">
+  <p>Here is the show page of posts from user</p>
+    <% @posts.each do |post| %>
+    <div class="row">
+    <div class="three columns">
+      <li>Post Title: <%= post.title %></li>
+      <li>Post id: <%= post.id %></li>
+    </div>
+    <% end %>
+  </div>
+</div>
