@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 #only logged in users can see profile pages
  # before_filter :authorize
- 	before_action :logged_in?, only: [:edit, :update :delete]
+ 	before_action :logged_in?, only: [:edit, :update, :delete]
  	before_action :current_user, only: [:show]
 
 	#renders home page
