@@ -37,8 +37,9 @@
  }
  .logo-container a {
    text-decoration: none;
-   color: #848484;
-   font-size: 1em;
+ }
+ .logo-container a img {
+   width: 15%;
  }
  .right-panel a {
    text-decoration: none;
@@ -49,6 +50,67 @@
    margin-right: 15px;
  }
 
+
+ #splash {
+   display: inline-block;
+ }
+
+ .column {
+   float: left;
+   box-sizing: border-box;
+ }
+ .column:first-child {
+   margin-left: 0;
+ }
+
+
+
+ h4 {
+   margin-top: 0;
+   margin-bottom: 2rem;
+   font-weight: 300;
+   height: 158px;
+    width: 75%;
+    text-align: center;
+  }
+
+  h1  {
+    text-align: center;
+  }
+
+  #header {
+    margin-bottom: 8%;
+    margin-top: 4%;
+  }
+
+ .button {
+   height: 38px;
+   padding: 0 30px;
+   text-align: center;
+   font-weight: 600;
+   text-decoration: none;
+   cursor: pointer;
+   box-sizing: border-box;
+ }
+
+ #create {
+   margin-right: 5%;
+ }
+
+ #buttons {
+   align-items: center;
+ }
+
+
+ #section1 {
+   background-image: url('https://duchessinwonderland.files.wordpress.com/2016/02/raven_bird_flying_smoke_black_white_92907_1920x1080.jpg?w=1200');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: cover;
+ }
+
+
  #city-container {
    margin: auto;
    top: 0;
@@ -57,5 +119,4 @@
    left: 0;
    width: 100%;
    height: 100%;
-}
-
+ }
