@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root to: "users#index"
-  #need to write home method in users controller
 
   get "/users/new", to: "users#new"
 
@@ -11,7 +10,6 @@ Rails.application.routes.draw do
 
   #user profile page
   get "/users/:id", to:"users#show", as: "user"
-
 
 
 

@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 #only logged in users can see profile pages
  # before_filter :authorize
- 	before_action :logged_in?, only: [:edit, :update, :delete]
- 	before_action :current_user, only: [:show]
+ 	# before_action :logged_in?, only: [:edit, :update, :delete]
+ 	# before_action :current_user, only: [:show, :edit, :update, :delete]
+ 	before_action :require_login
+ 	skip_before_action :require_login, only: [:index, :new, :create, :show]
 
 	#renders home page
 	def index
@@ -24,13 +26,13 @@ class UsersController < ApplicationController
 			#UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
 			# redirect_to "users/:id", flash: { success: "Successfully signed up!"}
-			# render :index
-
+			redirect_to user, flash: { success: "Successfully created account"}
 
 
 			# tell the UserMailer to send a welcome email after save
 			UserMailer.welcome_email(user).deliver_now
 			# #redirect to user#show w/ success message
+
 			redirect_to "/users", flash: { success: "Successfully signed up!"}
 			# tell the UserMailer to send a welcome email after save
 			UserMailer.welcome_email(user).deliver_now
@@ -48,6 +50,7 @@ class UsersController < ApplicationController
 	#edit user profile
 	def edit
 		@user = User.find(params[:id])
+		render 'edit'
 	end
 
 
@@ -56,7 +59,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		if @user.update_attributes(user_params)
 			flash[:success] = "Profile updated!"
-			redirect_to @user
+			# redirect_to @user
 		else
 			render 'edit'
 		end
@@ -66,6 +69,14 @@ class UsersController < ApplicationController
 
 	def user_params
 		params.require(:user).permit(:email, :password, :username, :location, :avatar)
+	end
+
+	def require_login
+		p current_user
+		unless current_user
+			flash[:error] = "You must be logged in to access this page"
+			redirect_to "/"
+		end
 	end
 
 end

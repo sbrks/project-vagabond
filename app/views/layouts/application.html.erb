@@ -5,6 +5,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <script> UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';</script>
+</script>
+<%= javascript_include_tag "https://ucarecdn.com/widget/2.5.5/uploadcare/uploadcare-2.5.5.min.js" %>
+
+
 </head>
 
 <body>
@@ -27,6 +33,8 @@
     </div>
   </div>
   </header>
+
+  
 
 
 <%= yield %>

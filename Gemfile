@@ -33,7 +33,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
 gem 'skrollr-rails', '~> 0.6.29'
 
