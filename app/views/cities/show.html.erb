@@ -1,8 +1,25 @@
 <!--app/views/cities/show.html.erb-->
 
-<div class= "container">
+<div class= "container" id="city-container">
 
-<hi> <%= @city.name %></hi>
+<div class="container">
+	<h3> <%= @city.name %></h3>
+</div>
 
-<!-- city photo and posts go here -->
+	<div class="container-fluid">
+	<div class="section hero">
+	<div class="container">
+	<div class="row">
+		<div class="10 columns">
+			<img class="city-image" style="width: 85%;" src="<%= @city.image_url %>">
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+<!--posts go here -->
 <!-- Need to make a new column --> 
+</div>
+
+
