@@ -5,32 +5,42 @@
 <h1>Welcome, <%= link_to @user.username %></h1> 
  <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
 
-
+<!--user photo div -->
  <div class="row">
-  	<div class="six columns">
-		<img src="#" width="250" height="250">
+  	<div class="four columns">
+		<img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
+
+		<div id="button submit">
+		<%= form_for @user, html: { multipart: true } do |form| %>
+		<%= link_to image_tag(@user.image.url(:med)), @user.image.url %>
+ 	 	<%= form.file_field :avatar %>
+ 	 	<%= submit_tag "Submit Image", class: "btn" %>
+		</div>
+
+	<div class="button">
+		<%= link_to "Edit Profile", edit_path(@user) %>
 	</div>
- 	<div class="six columns">
+	<% end %>
+</div>
+
+<!--user info div -->
+ 	<div class="four columns">
 		<p><b>Username: </b><%= @user.username %></p>
 		<p><b>Location: </b><%= @user.location %></p>
 		<p><b>Email: </b><%= @user.email %></p>
 	</div>
+
+<!--user post div -->
+	 <div class="four columns">
+		<h3><b>Recent Posts</b></h3>
+<!-- 		<p><b>Date Published:</b>#@post.created_at</p>
+		<p><b>Title:</b> #@post.title</p>
+		<p><b>Description: </b>#@post.description</p> -->
+
+	</div>
 </div>
 
 <div>
-
-
-
-<%= form_for @user, html: { multipart: true } do |form| %>
-  <%= form.file_field :avatar %>
-</div>
-
-<div class="button">
-<%= link_to "Edit Profile", edit_path(@user) %>
-</div>
-<% end %>
-
-<div class="button">Make New Post</div>
 
 
 </div>
