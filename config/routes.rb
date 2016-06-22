@@ -29,10 +29,10 @@ Rails.application.routes.draw do
 
   # index of all cities
   get "/cities", to: "cities#index"
-  get "/cities/:id", to: "cities#show", as: "city_show"
+  # get "/cities/:id", to: "cities#show", as: "city_show"
 
   #view posts in city profile
-  get "/cities/:id/posts", to: "posts#index"
+  get "/cities/:id", to: "posts#index"
   post "/cities/:id/posts", to: "posts#create"
   # edit form for posts
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   post "/cities/:id/new", to: "posts#create"
   # show posts
   get "/posts", to: "posts#show"
-  
+
   resources :posts, only: [:new, :create, :show, :index, :edit, :update, :destroy]
   resources :users, only: [:new, :create, :show, :index, :edit, :update]
 
