@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
 		user.authenticate(password)
 	end
 
+	validates :username, presence: true, uniqueness: true
+
 
 
 
