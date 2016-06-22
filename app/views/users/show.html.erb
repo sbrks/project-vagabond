@@ -25,12 +25,12 @@
   <%= form.file_field :avatar %>
 </div>
 
-<div class="form-group">
-	<%= form.submit "Change Photo", class: "btn btn-block btn-success" %>
+<div class="button">
+<%= link_to "Edit Profile", edit_path(@user) %>
 </div>
-
-<div class="form-group">
-<%= form.submit "Edit Profile" %>
 <% end %>
+
+<div class="button">Make New Post</div>
+
 
 </div>
