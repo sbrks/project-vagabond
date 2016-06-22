@@ -1,4 +1,10 @@
-<h3>Here is a city's index of posts</h3>
-<ul>
-  <%= @cities.name %>
-</ul>
+<div class="container">
+  <h3>Here is <%= @city.name %> index of posts</h3>
+  <ul>
+    <li><%= @city.name %></li>
+    <% @posts.each do |post| %>
+    <li>Title: <%= post.title %></li>
+    <li>Post id: <%= post.id %></li>
+    <% end %>
+  </ul>
+</div>
