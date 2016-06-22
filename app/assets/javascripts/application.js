@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//=Init Skroller
+
+$(document).ready({
+var s = skroller.init({
+  forceHeight: false
+});
+s.refresh($('.homeslide'));
+})
+var hide = $('.map').contents().find('#banner')
+$('#banner').hide();

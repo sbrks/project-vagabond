@@ -48,3 +48,68 @@
  #login {
    margin-right: 15px;
  }
+
+ #splash {
+   display: inline-block;
+ }
+
+ .column {
+   float: left;
+   box-sizing: border-box;
+ }
+ .column:first-child {
+   margin-left: 0;
+ }
+
+
+
+ h4 {
+   margin-top: 0;
+   margin-bottom: 2rem;
+   font-weight: 300;
+   text-align:left;
+ }
+
+ h1 {
+   text-align: center;
+ }
+
+ .button {
+   height: 38px;
+   padding: 0 30px;
+   text-align: center;
+   font-weight: 600;
+   text-decoration: none;
+   cursor: pointer;
+   box-sizing: border-box;
+ }
+
+ /* Slide 2 */
+
+#slide-2 .bcg {background-image: url('https://shirtpunchcdn.s3.amazonaws.com/catalog/category/GameOfThrones_Logo.png')}
+#slide-2 .hsContent {
+    margin-left: -450px;
+    top: auto;
+  }
+  #slide-2 h2 {
+    position: fixed;
+    top: 70%;
+  }
+
+  /*slide 4*/
+
+  #slide-4 .bcg {background-image: url('http://cdn.playbuzz.com/cdn/91d94bb9-c979-4585-8d49-56a50519897b/27921fda-4b38-49f6-ac4f-7d844400c3a7.jpg')}
+  #slide-4 .hsContent {
+    margin-left: -450px;
+    position: fixed;
+    top: 250px;
+}
+  #slide-4 h2 {
+      background: none;
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  #banner {
+    display: none;
+  }
