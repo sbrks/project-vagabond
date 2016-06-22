@@ -2,24 +2,16 @@
 <head><script>
 UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 </script>
-<!-- <script>uploadcare.openDialog(null, {
-  crop: "disabled",
-  previewStep: true
-}).done(function(file) {
-  file.promise().done(function(fileInfo){
-    console.log(fileInfo.cdnUrl);
-  });
-});
-</script> -->
-
 </head>
 <div class="container">
 
 <h1>Welcome, <%= link_to @user.username %></h1> 
  <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
- <div class="button">
-		<%= link_to "Edit Profile", edit_path(@user) %>
-	</div>
+
+<!-- edit profile button -->
+<div class="button">
+<%= link_to "Edit Profile", edit_path(@user) %>
+</div>
 
 <!--user photo div -->
  <div class="row">
@@ -47,6 +39,9 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 		<p><b>Username: </b><%= @user.username %></p>
 		<p><b>Location: </b><%= @user.location %></p>
 		<p><b>Email: </b><%= @user.email %></p>
+
+
+
 	</div>
 
 <!--user post div -->
