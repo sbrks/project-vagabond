@@ -30,11 +30,21 @@ class PostsController < ApplicationController
     render :edit
   end
 
+  def update
+    @post = Post.find(params[:id])
+    post_params = params.require(:post).permit(:title, :description)
+    if @post.update_attributes(post_params)
+      flash[:success] = "Post update!"
+      redirect_to @post
+    end
+  end
+
   def destroy
     p params
     ben = Post.find(params[:id])
     ben.destroy
     redirect_to "/posts"
   end
+
 
 end

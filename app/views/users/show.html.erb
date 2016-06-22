@@ -1,36 +1,26 @@
 <!-- app/views/users/show.html.erb -->
 
 <div class="container">
-
-<h1>Welcome, <%= link_to @user.username %></h1> 
- <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
-
-
- <div class="row">
-  	<div class="six columns">
-		<img src="#" width="250" height="250">
-	</div>
- 	<div class="six columns">
-		<p><b>Username: </b><%= @user.username %></p>
-		<p><b>Location: </b><%= @user.location %></p>
-		<p><b>Email: </b><%= @user.email %></p>
-	</div>
-</div>
-
-<div>
-
-
-
-<%= form_for @user, html: { multipart: true } do |form| %>
-  <%= form.file_field :avatar %>
-</div>
-
-<div class="button">
-<%= link_to "Edit Profile", edit_path(@user) %>
-</div>
-<% end %>
-
-<div class="button">Make New Post</div>
-
-
+  <h1>Welcome, <%= link_to @user.username %></h1>
+   <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
+   <div class="row">
+    <div class="six columns">
+  		<img src="#" width="250" height="250">
+  	</div>
+   	<div class="six columns">
+  		<p><b>Username: </b><%= @user.username %></p>
+  		<p><b>Location: </b><%= @user.location %></p>
+  		<p><b>Email: </b><%= @user.email %></p>
+  	</div>
+  </div>
+  <div>
+    <%= form_for @user, html: { multipart: true } do |form| %>
+    <%= form.file_field :avatar %>
+  </div>
+  <div class="button">
+    <%= link_to "Edit Profile", edit_path(@user) %>
+  </div>
+  <% end %>
+  <div class="button" id="make-post">Make Post</div>
+  <div class="button" id="all-posts">All Posts</div>
 </div>
