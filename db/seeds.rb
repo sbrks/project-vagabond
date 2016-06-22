@@ -17,8 +17,8 @@ cities = City.create([
 	{ name: 'Qarth', image_url: 'http://awoiaf.westeros.org/images/thumb/a/ab/Qarth_HBO.jpg/638px-Qarth_HBO.jpg'}, 
 	{ name: 'Braavos', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/7/7b/Titan_of_Braavos.jpg/revision/latest/scale-to-width-down/1000?cb=20150504024857'}, 
 	{ name: 'White Harbor', image_url: 'http://vignette3.wikia.nocookie.net/gotrp/images/7/79/White_harbor.jpg/revision/latest?cb=20140914155614'}, 
-	{ name: 'Lannisport', 'http://static.planetminecraft.com/files/resource_media/screenshot/1227/lannisport_0001_2783518.jpg'}
+	{ name: 'Lannisport', image_url: 'http://static.planetminecraft.com/files/resource_media/screenshot/1227/lannisport_0001_2783518.jpg'},
 	{ name: 'Pentos', image_url: 'https://s-media-cache-ak0.pinimg.com/564x/ac/d2/ce/acd2ce9de0c642b1d1115c49b5d3e884.jpg'}, 
-	{ name: 'Astapor', image_url: 'http://vignette1.wikia.nocookie.net/ironthronerp/images/a/a3/Astapor.png/revision/latest?cb=20151023174622'} 
+	{ name: 'Astapor', image_url: 'http://vignette1.wikia.nocookie.net/ironthronerp/images/a/a3/Astapor.png/revision/latest?cb=20151023174622'}, 
 	{ name: 'Yunkai', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/5/50/Yunkai.png/revision/latest?cb=20150328212211'}, 
 	{ name: 'Qohor', image_url: 'http://fandomania.com/wp-content/uploads/2011/05/06/Games-of-Thrones-1.03-1.jpg'}])
