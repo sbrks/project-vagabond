@@ -1,9 +1,25 @@
 <!-- app/views/users/show.html.erb -->
+<head><script>
+UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
+</script>
+<!-- <script>uploadcare.openDialog(null, {
+  crop: "disabled",
+  previewStep: true
+}).done(function(file) {
+  file.promise().done(function(fileInfo){
+    console.log(fileInfo.cdnUrl);
+  });
+});
+</script> -->
 
+</head>
 <div class="container">
 
 <h1>Welcome, <%= link_to @user.username %></h1> 
  <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
+ <div class="button">
+		<%= link_to "Edit Profile", edit_path(@user) %>
+	</div>
 
 <!--user photo div -->
  <div class="row">
@@ -11,15 +27,18 @@
 		<img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
 
 		<div id="button submit">
-		<%= form_for @user, html: { multipart: true } do |form| %>
-		<%= link_to image_tag(@user.image.url(:med)), @user.image.url %>
- 	 	<%= form.file_field :avatar %>
- 	 	<%= submit_tag "Submit Image", class: "btn" %>
+		<%= form_for @user do |form| %>
+
 		</div>
 
-	<div class="button">
-		<%= link_to "Edit Profile", edit_path(@user) %>
-	</div>
+		<div id="button upload">
+		<h6>Change Photo
+		<img src="">
+		
+		<img src="#ucarecdnlink" >
+		<input type="hidden" role="uploadcare-uploader" name="my_file" /></h6>
+		</div>
+
 	<% end %>
 </div>
 
