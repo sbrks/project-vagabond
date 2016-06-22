@@ -29,17 +29,22 @@ Rails.application.routes.draw do
   #update user
   patch "/users/:id", to: "users#update"
 
-  #
+  # index of all cities
   get "/cities", to: "cities#index"
-
   get "/cities/:id", to: "cities#show", as: "city_show"
 
   #view posts in city profile
   get "/cities/:id/posts", to: "posts#index"
   post "/cities/:id/posts", to: "posts#create"
+  # edit form for posts
+  get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
+  patch "/posts/:id", to: "posts#update"
+  delete "/posts/:id/delete", to: "posts#destroy", as: "delete"
   #view new post form
-  get "/cities/:id/new", to: "city#new"
-
+  get "/cities/:id/new", to: "posts#new", as: "new_post"
+  post "/cities/:id/new", to: "posts#create"
+  # show posts
+  get "/posts", to: "posts#show"
 
   resources :users, only: [:new, :create, :show, :index, :edit, :update]
 
