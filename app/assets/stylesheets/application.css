@@ -37,8 +37,9 @@
  }
  .logo-container a {
    text-decoration: none;
-   color: #848484;
-   font-size: 1em;
+ }
+ .logo-container a img {
+   width: 15%;
  }
  .right-panel a {
    text-decoration: none;
@@ -68,12 +69,19 @@
    margin-top: 0;
    margin-bottom: 2rem;
    font-weight: 300;
-   text-align:left;
- }
+   height: 158px;
+    width: 75%;
+    text-align: center;
+  }
 
- h1 {
-   text-align: center;
- }
+  h1  {
+    text-align: center;
+  }
+
+  #header {
+    margin-bottom: 8%;
+    margin-top: 4%;
+  }
 
  .button {
    height: 38px;
@@ -85,34 +93,23 @@
    box-sizing: border-box;
  }
 
- /* Slide 2 */
+ #create {
+   margin-right: 5%;
+ }
 
-#slide-2 .bcg {
-    margin-left: -450px;
-    top: auto;
-  }
-  #slide-2 h2 {
-    position: fixed;
-    top: 70%;
-  }
+ #buttons {
+   align-items: center;
+ }
 
-  /*slide 4*/
 
-  #slide-4 .bcg {background-image: url('http://cdn.playbuzz.com/cdn/91d94bb9-c979-4585-8d49-56a50519897b/27921fda-4b38-49f6-ac4f-7d844400c3a7.jpg')}
-  #slide-4 .hsContent {
-    margin-left: -450px;
-    position: fixed;
-    top: 250px;
-}
-  #slide-4 h2 {
-      background: none;
-      padding-left: 0;
-      padding-right: 0;
-  }
+ #section1 {
+   background-image: url('https://duchessinwonderland.files.wordpress.com/2016/02/raven_bird_flying_smoke_black_white_92907_1920x1080.jpg?w=1200');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: cover;
+ }
 
-  #banner {
-    display: none;
-  }
 
  #city-container {
    margin: auto;
