@@ -1,8 +1,10 @@
-<h3>City Index</h3>
+<div class="container">
+	<h3>City Index</h3>
 
-<ul>
-<% @cities.each do | city | %>
-	<li><%= city.name %></li>
-	<li><%= city.id %></li>
-<% end %>
-</ul>
+	<ul>
+	<% @cities.each do | city | %>
+		<li><%= city.name %></li>
+		<li><%= city.id %></li>
+	<% end %>
+	</ul>
+</div>
