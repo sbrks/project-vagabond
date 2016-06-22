@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
 	#validations
 	validates :email, presence: true, uniqueness: true
+	validates :username, presence: true, uniqueness: true
 
 	has_secure_password
 
@@ -20,7 +21,7 @@ class User < ActiveRecord::Base
 		user.authenticate(password)
 	end
 
-	validates :username, presence: true, uniqueness: true
+	
 
 
 
