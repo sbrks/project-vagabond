@@ -34,6 +34,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 
 
+gem 'skrollr-rails', '~> 0.6.29'
+
+gem 'parallax-rails', '~> 1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
@@ -45,4 +49,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'better_errors'
 end
