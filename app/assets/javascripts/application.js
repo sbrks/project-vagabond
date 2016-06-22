@@ -22,5 +22,5 @@ var s = skroller.init({
 });
 s.refresh($('.homeslide'));
 })
-var hide = $('.map').contents().find('#banner')
+$('.map').contents().find('#banner')
 $('#banner').hide();
