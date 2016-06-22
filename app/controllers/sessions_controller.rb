@@ -10,12 +10,11 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:password])
 			#this creates the session, logging in the user
 			session[:user_id] = user.id
-			#redirect to show page
-			redirect_to "/users" #TODO: redirect to user_path
-
+			#redirect to user show page
+			redirect_to user
 		else
 			#if there's an error logging user in
-			redirect_to "/login", flash: { error: user.errors.full_messages.to_sentence }
+			redirect_to "/login", flash: { error: "There was a problem logging you in." }
 		end
 	end
 
@@ -24,8 +23,6 @@ class SessionsController < ApplicationController
 		#logout method is defined in helper file
 		session[:user_id] = nil
 		redirect_to root_path
-
-
 	end
 
 end

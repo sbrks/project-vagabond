@@ -38,6 +38,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 
+
 	end
 
 	#edit user profile
@@ -49,20 +50,18 @@ class UsersController < ApplicationController
 	#update user profile photo
 	def update
 		@user = User.find(params[:id])
-		# @user.update_attribute(:avatar, params[:user][:avatar])
-		# if @user.update_attribute(:avatar, params[:user][:avatar])
-		# flash[:success] = "Photo updated"
 		if @user.update_attributes(user_params)
 			flash[:success] = "Profile updated!"
-		else
 			redirect_to @user
+		else
+			render 'edit'
 		end
 	end
 
 	private
 
 	def user_params
-		params.require(:user).permit(:email, :password, :username, :location)
+		params.require(:user).permit(:email, :password, :username, :location, :avatar)
 	end
 
 end

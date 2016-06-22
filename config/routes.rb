@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post "/users", to: "users#create"
 
   #user profile page
-  get "/users/:id", to:"users#show", as: "user_path"
+  get "/users/:id", to:"users#show", as: "user"
 
 
 
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   #edit user profile, returns edit form for editing profile
-  get "/users/:id/edit", to: "users#edit"
+  get "/users/:id/edit", to: "users#edit", as: "edit"
 
   #update user
   patch "/users/:id", to: "users#update"
