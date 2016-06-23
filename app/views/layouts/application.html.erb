@@ -24,7 +24,6 @@
     <div class="nine columns">
       <div class="right-panel">
         <% if current_user %>
-        <%= link_to "Cities", "/cities", method: "GET" %>
         Welcome <a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
         <%= link_to "Logout", '/logout', method: "DELETE" %>
         <% else %>
