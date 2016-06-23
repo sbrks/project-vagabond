@@ -1,25 +1,50 @@
-<div class="container">
+<div class="container-fluid">
+<!--city name -->
+<div class="row">
+    <div class="twelve columns">
+     <h1><%= @city.name %></h1>
+    </div>
+</div>
 
-  <h1><%= @city.name %></h1>
-    <h3 style="text-align: center"><div class="button">
-		<%= link_to "Add New Post", new_post_path%>
+<!--city img -->
+<div class="row">
+<div class="sixteen columns" id="cityshow" style="background-image:url('<%= @city.image_url %>')">fdafds</div>
+</div>
+</div>
+
+
+
+<!--new post button -->
+<div class="row">
+  <div class="twelve columns">
+      <h3 style="text-align: center"><div class="button">
+		  <%= link_to "Add New Post", new_post_path%>
 	</div></h3>
+</div>
 
-
-
+<div class="row">
+<div class="twelve columns">
+<div class="eight columns offset-by-two">
     <% @posts.each do |post| %>
-    <h3 style="padding: 0px"><%= post.title %></h3>
-    <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
+    <h3 style="#"><%= post.title %></h3>
+    <p style="#">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
     <p><%= post.description %> </p>
 
     <%= link_to "Edit Post", post_edit_path%>
     <% end %>
+  </div>
+</div>
+</div>
 
-<section  style="text-align: center">
-   <div class="button" >
-		<%= link_to "Add New Post", new_post_path%>
-	</div>
-</section>
+<div class="row">
+<div class="twelve columns">
+  <section  style="text-align: center">
+     <div class="button" >
+		    <%= link_to "Add New Post", new_post_path%>
+	   </div>
+  </section>
+</div>
+</div>
 
 
 </div>
