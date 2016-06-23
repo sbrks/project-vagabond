@@ -24,7 +24,7 @@
     <div class="nine columns">
       <div class="right-panel">
         <% if current_user %>
-        Welcome <%= current_user.username %>  <%= link_to "Logout", '/logout', method: "DELETE" %>
+        Welcome <%= current_user.username  %> <%= link_to "Logout", '/logout', method: "DELETE" %>
         <% else %>
         <a href="/login" style="display: inline;" id="login">Log In</a>
         <a href="/signup" style="display: inline;">Create Account</a>
