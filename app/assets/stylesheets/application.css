@@ -101,21 +101,26 @@
  }
 
  #buttons {
+   position: relative;
+   left: 23%;
    align-items: center;
-   margin-bottom: 18%;
+   margin-top: 33%;
+   align-items: center;
+   margin-bottom: 10%;
+
  }
 
 
  #section1 {
-   background-image: url('https://duchessinwonderland.files.wordpress.com/2016/02/raven_bird_flying_smoke_black_white_92907_1920x1080.jpg?w=1200');
+   /*background-image: url('https://duchessinwonderland.files.wordpress.com/2016/02/raven_bird_flying_smoke_black_white_92907_1920x1080.jpg?w=1200');
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: scroll;
-   background-size: cover;
+   background-size: cover;*/
  }
 
  #westeros {
-   max-width: 96%%;
+   max-width: 100%;
    margin-top: 15%;
    margin-bottom: 10%;
    position: relative;

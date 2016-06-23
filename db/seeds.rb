@@ -23,6 +23,4 @@ cities = City.create([
 	{ name: 'Yunkai', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/5/50/Yunkai.png/revision/latest?cb=20150328212211'},
 	{ name: 'Qohor', image_url: 'http://fandomania.com/wp-content/uploads/2011/05/06/Games-of-Thrones-1.03-1.jpg'}])
 
-	posts = Post.create([
-		{ title: 'Post 1', description: 'Posting Something about Westeros', user_id: '5'}
-		])
+	
