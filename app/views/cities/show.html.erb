@@ -1,25 +1,35 @@
 <!--app/views/cities/show.html.erb-->
 
+<section id="cityshow" style="background-image:url('<%= @city.image_url %>')">
 <div class= "container" id="city-container">
 
-<div class="container">
-	<h3> <%= @city.name %></h3>
-</div>
+
+
 
 	<div class="container-fluid">
 	<div class="section hero">
 	<div class="container">
-	<div class="row">
-		<div class="10 columns">
-			<img class="city-image" style="width: 85%;" src="<%= @city.image_url %>">
+	<div class="row group">
+		<h3> <%= @city.name %></h3>
+		<br>
+		<a class="button button-primary" href="/cities/:id/new" id="newPost">Hodor</a>
+		<!-- <div class="10 columns">
+			 <img class="city-image" style="width: 85%;" src="<%= @city.image_url %>">
+	 </div> -->
+	</div>
+	</div>
+	</div>
+	</div>
+</section>
+<section>
+	<div class="container" id="postbody">
+		<div class="row group">
+			<div class="eight columns">
+				<% @posts.each do |post| %>
+				<h3><a href="/users/:id">Post Title: <%= post.title %></a></h3>
+				<p><%= post.description%></li>
+				<% end %>
+			</div>
 		</div>
 	</div>
-	</div>
-	</div>
-	</div>
-
-<!--posts go here -->
-<!-- Need to make a new column --> 
-</div>
-
-
+</section>

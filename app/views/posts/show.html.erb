@@ -1,11 +1,32 @@
-<div class="container">
-  <p>Here is the show page of posts from user</p>
-    <% @posts.each do |post| %>
-    <div class="row">
-    <div class="three columns">
-      <li>Post Title: <%= post.title %></li>
-      <li>Post id: <%= post.id %></li>
-    </div>
-    <% end %>
-  </div>
-</div>
+<main id="postshow">
+<section>
+  <div class="section hero">
+
+    <div class="container">
+      <div class="row group">
+        <div class="12 columns">
+          <div class="container">
+            <div class="row group">
+              <div class="ten columns">
+                <p>Here is the show page of posts from user</p>
+              </div>
+            </div>
+          </div>
+            <div class="container" id="postbody">
+              <div class="row group">
+                <div class="eight columns">
+                  <% @posts.each do |post| %>
+                  <h3><a href="#">Post Title: <%= post.title %></a></h3>
+                  <p><%= post.description%></li>
+                  <% end %>
+                  <a href="/posts/:id/edit">Edit</a>
+                  <a href="/posts/:id/delete">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
