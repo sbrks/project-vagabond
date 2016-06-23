@@ -7,8 +7,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @city = City.find(params[:id])
-    render :new
+    # @city = City.find(params[:id])
+    # render :new
+
   end
 
   def create
@@ -21,6 +22,7 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.all
+    @city = City.find(params[:id])
     render :show
   end
 
@@ -34,7 +36,13 @@ class PostsController < ApplicationController
     post_params = params.require(:post).permit(:title, :description)
     if @post_update.update_attributes(post_params)
       flash[:success] = "Post update!"
+
+      city = City.find(params[:id])
+      # redirect_to "/cities/#{city.id}/posts"
+      # render :index
+
       redirect_to ("/posts/#{@post_update.id}/edit")
+
     end
   end
 
