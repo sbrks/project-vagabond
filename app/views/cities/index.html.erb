@@ -1,8 +1,16 @@
+<div class="container">
 <h3>City Index</h3>
+</div>
+<div class="section hero">
+	<div class="container">
+	<ul>
+	<% @cities.each do | city | %>
+		<li>
+			<a href="/cities/<%= city.id %>">
+		<%= city.name %></a>
+		</li>
+	<% end %>
+	</ul>
+</div>
+</div>
 
-<ul>
-<% @cities.each do | city | %>
-	<li><%= city.name %></li>
-	<li><%= city.id %></li>
-<% end %>
-</ul>
