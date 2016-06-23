@@ -29,14 +29,16 @@ Rails.application.routes.draw do
 
   # index of all cities
   get "/cities", to: "cities#index"
+  # index of all posts
+  get "/posts/index", to: "posts#index"
 
   #view posts in city profile
-  get "/cities/:id", to: "cities#show"
+  get "/cities/:id/posts", to: "cities#show"
   post "/cities/:id/posts", to: "posts#create"
   # edit form for posts
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
-  patch "/posts/:id", to: "posts#update", as: "post_update"
-  delete "/posts/:id/delete", to: "posts#destroy", as: "delete"
+  patch "/posts/:id", to: "posts#update"
+  delete "/posts/:id/delete", to: "users#destroy", as: "delete"
   #view new post form
   get "/cities/:id/new", to: "posts#new", as: "new_post"
   post "/cities/:id/new", to: "posts#create"
@@ -44,6 +46,6 @@ Rails.application.routes.draw do
   get "/posts", to: "posts#show"
 
   resources :posts, only: [:new, :create, :show, :index, :edit, :update, :destroy]
-  resources :users, only: [:new, :create, :show, :index, :edit, :update]
+  resources :users, only: [:new, :create, :show, :index, :edit, :update, :destroy]
 
 end
