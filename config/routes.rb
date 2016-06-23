@@ -49,7 +49,7 @@ Rails.application.routes.draw do
 
   #view new post form
   get "/cities/:id/new", to: "posts#new", as: "new_post"
-  post "/cities/:id/new", to: "posts#create"
+  # post "/cities/:id/new", to: "posts#create"
 
   #SB working on this
   get "/cities/:id/posts", to: "posts#index"

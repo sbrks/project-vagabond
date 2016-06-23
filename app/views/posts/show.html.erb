@@ -5,7 +5,6 @@
 	</div></h3>
 
 
-
     <% @posts.each do |post| %>
     <h3 style="padding: 0px"><%= post.title %></h3>
     <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
