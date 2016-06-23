@@ -22,12 +22,13 @@ class PostsController < ApplicationController
 
     Post.create(post_params)
 
-    redirect_to "/cities/#{city.id}/posts"
+    redirect_to "/cities/#{city.id}"
   end
 
   def show
     @posts = Post.all
     @city = City.find(params[:id])
+    @user = User.find(params[:id])
     render :show
   end
 
