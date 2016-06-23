@@ -29,8 +29,6 @@ ActiveRecord::Schema.define(version: 20160623063046) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "cities_id"
-    t.integer  "users_id"
     t.integer  "user_id"
   end
 
@@ -40,13 +38,9 @@ ActiveRecord::Schema.define(version: 20160623063046) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "username"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "location"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
   end
 
   add_foreign_key "posts", "users"

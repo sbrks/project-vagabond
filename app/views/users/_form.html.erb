@@ -1,5 +1,5 @@
  <!-- app/views/users/new.html.erb -->
-
+<div class="container">
 <%= form_for :user, url: "/users" do |f| %>
   <div class="form-group">
     <%= f.text_field :username, class: "form-control", placeholder: "Username", autofocus: true %>
@@ -21,3 +21,4 @@
     <%= f.submit "Create Account", class: "btn btn-block btn-success" %>
   </div>
 <% end %>
+</div>

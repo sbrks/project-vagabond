@@ -1,13 +1,10 @@
 <div class="container">
-  <h3>Edit your post <%= @post.title %></h3>
+  <h3>Edit your post <%= @post_update.title %></h3>
 </div>
 <div class="container">
-  <%= form_for post_edit_path do |f| %>
+  <%= form_for(@post_update) do |f| %>
   <%= f.text_field :title %><br>
   <%= f.text_area :description %><br>
   <%= f.submit "Save Changes" %>
   <% end %>
-</div>
-<div class="container">
-  <%= button_to "Delete", delete_url , method: :delete %>
 </div>
