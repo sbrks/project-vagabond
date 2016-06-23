@@ -2,7 +2,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    @city = City.find(params[:id])
     render :index
   end
 
@@ -28,26 +27,29 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post_update = Post.find(params[:id])
     render :edit
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post_update = Post.find(params[:id])
     post_params = params.require(:post).permit(:title, :description)
-    if @post.update_attributes(post_params)
+    if @post_update.update_attributes(post_params)
       flash[:success] = "Post update!"
+
       city = City.find(params[:id])
-      redirect_to "/cities/#{city.id}/posts"
+      # redirect_to "/cities/#{city.id}/posts"
       # render :index
+
+      redirect_to ("/posts/#{@post_update.id}/edit")
+
     end
   end
 
   def destroy
-    p params
     ben = Post.find(params[:id])
     ben.destroy
-    redirect_to "/posts"
+    redirect_to :back
   end
 
 

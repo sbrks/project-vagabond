@@ -1,0 +1,35 @@
+<!--app/views/cities/show.html.erb-->
+
+<div class= "container" id="city-container">
+
+<div class="container">
+	<h3> <%= @city.name %></h3>
+</div>
+
+	<div class="container-fluid">
+	<div class="section hero">
+	<div class="container">
+	<div class="row">
+		<div class="10 columns">
+			<img class="city-image" style="width: 85%;" src="<%= @city.image_url %>">
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+<!--posts go here -->
+<!-- Need to make a new column -->
+<div class="container">
+  <p>Here is the show page of posts from user</p>
+    <% @posts.each do |post| %>
+    <div class="row">
+    <div class="three columns">
+      <li>Post Title: <%= post.title %></li>
+      <li>Post id: <%= post.id %></li>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+</div>
