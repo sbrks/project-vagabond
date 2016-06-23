@@ -138,6 +138,7 @@
    height: 100%;
  }
 
+
  #cityshow {
 /*  background: url("<%= @city.image_url %>");*/
   background-repeat: no-repeat;
