@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 	#renders home page
 	def index
 		@users = User.all
+    @posts = Post.all
 		render :index
 	end
 
@@ -25,8 +26,7 @@ class UsersController < ApplicationController
 			# tell the UserMailer to send a welcome email after save
 			#UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
-			# redirect_to "users/:id", flash: { success: "Successfully signed up!"}
-			redirect_to user, flash: { success: "Successfully created account"}
+			# redirect_to "users/:id", flash: { success: "Successfully signed up!"
 
 
 			# tell the UserMailer to send a welcome email after save
@@ -45,8 +45,17 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+    @user_id = session[:user_id]
+    @posts = Post.all
+    render :show
 	end
+  # delete from profile page
+  def destroy
 
+    ben = Post.find(params[:id])
+    ben.destroy
+    redirect_to :back
+  end
 	#edit user profile
 	def edit
 		@user = User.find(params[:id])
@@ -72,7 +81,6 @@ class UsersController < ApplicationController
 	end
 
 	def require_login
-		p current_user
 		unless current_user
 			flash[:error] = "You must be logged in to access this page"
 			redirect_to "/"
