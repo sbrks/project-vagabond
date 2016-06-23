@@ -24,7 +24,6 @@ cities = City.create([
 	{ name: 'Astapor', image_url: 'http://vignette1.wikia.nocookie.net/ironthronerp/images/a/a3/Astapor.png/revision/latest?cb=20151023174622'}, 
 	{ name: 'Yunkai', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/5/50/Yunkai.png/revision/latest?cb=20150328212211'}, 
 	{ name: 'Qohor', image_url: 'http://fandomania.com/wp-content/uploads/2011/05/06/Games-of-Thrones-1.03-1.jpg'},
-	{ name: 'Storms End', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
 	{ name: 'Riverrun', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'},
 	{ name: 'Pyke', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
 	{ name: 'Sunspear', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'}])
