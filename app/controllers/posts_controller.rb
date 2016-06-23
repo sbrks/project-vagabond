@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.all
+    @city = City.find(params[:id])
     render :show
   end
 

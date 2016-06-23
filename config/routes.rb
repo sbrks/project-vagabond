@@ -28,11 +28,12 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
 
   # index of all cities
+  #MS and VF working on this route
   get "/cities", to: "cities#index"
   # get "/cities/:id", to: "cities#show", as: "city_show"
 
   #view posts in city profile
-  get "/cities/:id", to: "posts#index"
+  get "/cities/:id", to: "posts#show"
   post "/cities/:id/posts", to: "posts#create"
 
   get "/posts/:id", to: "posts#show"
@@ -47,6 +48,7 @@ Rails.application.routes.draw do
   get "/cities/:id/new", to: "posts#new", as: "new_post"
   post "/cities/:id/new", to: "posts#create"
 
+  #SB working on this
   get "/cities/:id/posts", to: "posts#index"
 
   # show posts
