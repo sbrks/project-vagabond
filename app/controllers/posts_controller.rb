@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @city = City.find(params[:id])
     render :index
   end
 
@@ -14,9 +15,13 @@ class PostsController < ApplicationController
 
   def create
     params[:posts][:user_id] = current_user.id
-    post_params = params.require(:posts).permit(:title, :description, :user_id)
-    Post.create(post_params)
+
     city = City.find(params[:id])
+    params[:posts][:city_id] = city.id
+    post_params = params.require(:posts).permit(:title, :description, :user_id, :city_id)
+
+    Post.create(post_params)
+
     redirect_to "/cities/#{city.id}/posts"
   end
 
