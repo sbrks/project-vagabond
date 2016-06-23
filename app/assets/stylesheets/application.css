@@ -62,7 +62,9 @@
  .column:first-child {
    margin-left: 0;
  }
-
+ .trash-btn {
+   background-color: red;
+ }
 
 
  h4 {
