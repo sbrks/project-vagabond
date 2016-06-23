@@ -35,7 +35,8 @@ Rails.application.routes.draw do
   get "/cities/:id", to: "posts#index"
   post "/cities/:id/posts", to: "posts#create"
 
-  
+  get "/posts/:id", to: "posts#show"
+
   # edit form for posts
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
   patch "/posts/:id", to: "posts#update", as: "post_update"
@@ -46,8 +47,12 @@ Rails.application.routes.draw do
   get "/cities/:id/new", to: "posts#new", as: "new_post"
   post "/cities/:id/new", to: "posts#create"
 
+  get "/cities/:id/posts", to: "posts#index"
+
   # show posts
   get "/posts", to: "posts#show"
+
+
 
   resources :posts, only: [:new, :create, :show, :index, :edit, :update, :destroy]
   resources :users, only: [:new, :create, :show, :index, :edit, :update]

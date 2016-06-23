@@ -26,8 +26,6 @@ class UsersController < ApplicationController
 			#UserMailer.welcome_email(@user).deliver_later
 			#redirect to user#show w/ success message
 			# redirect_to "users/:id", flash: { success: "Successfully signed up!"}
-			redirect_to user, flash: { success: "Successfully created account"}
-
 
 			# tell the UserMailer to send a welcome email after save
 			UserMailer.welcome_email(user).deliver_now

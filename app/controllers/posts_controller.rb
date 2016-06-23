@@ -36,7 +36,9 @@ class PostsController < ApplicationController
     post_params = params.require(:post).permit(:title, :description)
     if @post.update_attributes(post_params)
       flash[:success] = "Post update!"
-      redirect_to @post
+      city = City.find(params[:id])
+      redirect_to "/cities/#{city.id}/posts"
+      # render :index
     end
   end
 
