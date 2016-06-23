@@ -8,8 +8,8 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @city = City.find(params[:id])
-    render :new
+    # @city = City.find(params[:id])
+    # render :new
   end
 
   def create
