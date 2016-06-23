@@ -5,9 +5,7 @@
 <div class="section hero">
 	<div class="container">
 	<ul style="list-style: none;">
-	<% @cities.each do | city | %>
-		<li><a href="/cities/<%= city.id %>"><%= city.name %></a></li>
-		<li><%= city.id %></li>
+	<% @cities.each do | city | %><% city.sigil_image %>
 		<li>
 			<a href="/cities/<%= city.id %>">
 			<%= link_to image_tag(city.sigil_image) %>

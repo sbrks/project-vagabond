@@ -112,11 +112,11 @@
 
 
  #section1 {
-   /*background-image: url('https://duchessinwonderland.files.wordpress.com/2016/02/raven_bird_flying_smoke_black_white_92907_1920x1080.jpg?w=1200');
+   background-image: url('http://wallpaper.zone/img/5477621.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: scroll;
-   background-size: cover;*/
+   background-size: cover;
  }
 
  #westeros {
@@ -126,7 +126,6 @@
    position: relative;
    left: 1%;
  }
-
 
  #city-container {
    margin: auto;
