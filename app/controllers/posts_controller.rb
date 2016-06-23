@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @city = City.find(params[:id])
+    # @city = City.find(params[:id])
     render :new
   end
 
