@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+#clear database
+City.destroy_all
 
 cities = City.create([
 	{ name: 'Gulltown', image_url: 'http://awoiaf.westeros.org/images/thumb/8/8d/TN-The_Vale_of_Arryn.jpg/800px-TN-The_Vale_of_Arryn.jpg'}, 
