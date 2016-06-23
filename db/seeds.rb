@@ -11,11 +11,11 @@ City.destroy_all
 
 cities = City.create([
 
-	{ name: 'Gulltown', image_url: 'http://awoiaf.westeros.org/images/thumb/8/8d/TN-The_Vale_of_Arryn.jpg/800px-TN-The_Vale_of_Arryn.jpg'}, 
+	{ name: 'Gulltown', image_url: 'http://awoiaf.westeros.org/images/thumb/8/8d/TN-The_Vale_of_Arryn.jpg/800px-TN-The_Vale_of_Arryn.jpg', sigil_image: '/app/assets/images/House-Arryn-Main-Shield.png'}, 
 	{ name: 'Volantis', image_url: 'http://vignette2.wikia.nocookie.net/gameofthrones/images/8/8d/Volantis_5x03_(1).jpg/revision/latest?cb=20150427111331'}, 
 	{ name: 'Meereen', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/8/89/Meereen.png/revision/latest?cb=20150328211743'}, 
-	{ name: 'Oldtown', image_url: 'http://vignette2.wikia.nocookie.net/iceandfire/images/c/cc/Oldtown-Game-of-Thrones.jpeg/revision/latest?cb=20120619213250'}, 
-	{ name: 'Kings Landing', image_url: 'http://vignette3.wikia.nocookie.net/gameofthrones/images/4/43/GreatSeptExteriors.jpg/revision/latest?cb=20150321161915'}, 
+	{ name: 'Oldtown', image_url: 'http://vignette2.wikia.nocookie.net/iceandfire/images/c/cc/Oldtown-Game-of-Thrones.jpeg/revision/latest?cb=20120619213250', sigil_image: '/app/assets/images/House-Martell-Main-Shield.png'}, 
+	{ name: 'Kings Landing', image_url: 'http://vignette3.wikia.nocookie.net/gameofthrones/images/4/43/GreatSeptExteriors.jpg/revision/latest?cb=20150321161915', sigil_image: '/app/assets/images/House-Lannister-Main-Shield.png'}, 
 	{ name: 'Qarth', image_url: 'http://awoiaf.westeros.org/images/thumb/a/ab/Qarth_HBO.jpg/638px-Qarth_HBO.jpg'}, 
 	{ name: 'Braavos', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/7/7b/Titan_of_Braavos.jpg/revision/latest/scale-to-width-down/1000?cb=20150504024857'}, 
 	{ name: 'White Harbor', image_url: 'http://vignette3.wikia.nocookie.net/gotrp/images/7/79/White_harbor.jpg/revision/latest?cb=20140914155614'}, 
@@ -29,7 +29,5 @@ cities = City.create([
 	{ name: 'Pyke', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
 	{ name: 'Sunspear', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'}])
 
-	posts = Post.create([
-		{ title: 'Post 1', description: 'Posting Something about Westeros', user_id: '5'}
-		])
+	
 
