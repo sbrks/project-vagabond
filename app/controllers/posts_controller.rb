@@ -16,8 +16,8 @@ class PostsController < ApplicationController
   def create
     params[:posts][:user_id] = current_user.id
 
-    # city = City.find(params[:id])
-    # params[:posts][:city_id] = city.id
+    city = City.find(params[:id])
+    params[:posts][:city_id] = city.id
     post_params = params.require(:posts).permit(:title, :description, :user_id, :city_id)
 
     Post.create(post_params)
@@ -28,6 +28,7 @@ class PostsController < ApplicationController
   def show
     @posts = Post.all
     @city = City.find(params[:id])
+    @user = User.find(params[:id])
     render :show
   end
 
