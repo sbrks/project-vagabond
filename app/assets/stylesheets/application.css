@@ -124,7 +124,7 @@
    margin-top: 15%;
    margin-bottom: 10%;
    position: relative;
-   left: 2%;
+   left: 1%;
  }
 
 
@@ -143,8 +143,6 @@
   background-repeat: no-repeat;
   display: inline-block;
   width: 50%;
-    max-width: 100%;
-    margin: 100%;
+  max-width: 100%;
+  margin: 100%;
  }
-
-
