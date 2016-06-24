@@ -1,59 +1,44 @@
 <!-- app/views/users/show.html.erb -->
 
 
-<div class="container">
-<div class="row" style="text-align:center">
-<h1>Welcome, <%= link_to @user.username %></h1>
- <h5> Subject Born <%= @user.created_at.strftime ("%A, %B %d, %Y") %></h5>
+<div class="container-fluid">
 
 
-</div>
-<br>
+<section class="hero">
+    <div class="row" style="text-align:center">
+        <h1 style="margin:0">Welcome, <%= link_to @user.username %></h1>
+
+        <h5> Subject Born <%= @user.created_at.strftime ("%A, %B %d, %Y") %> in <%= @user.location %></h5>
+        </div>
+</section>
+
+
+<div class="container six rows">
+        <div class="row" style="text-align:center">
+            <div class="button button-primary" id="explore"><a href="/cities">Start Exploring</a></div>
+        </div>
+    </div>
+
+</div><br>
+
 
 <!--user photo div -->
  <div class="row">
-<<<<<<< HEAD
-    <div class="five columns">
-        <img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
-        <div id="button submit">
-        <%= form_for @user do |form| %>
-        </div>
-        <div id="button upload">
-        <h6>Change Photo
-        <input type="hidden" role="uploadcare-uploader" name="my_file" /></h6>
-        </div>
-    <% end %>
+
+       <div class="eight columns offset-by-four">
+            <%= image_tag @user.image.url(:medium) %>
 </div>
 
-
-<!--user info div -->
 <div class="row">
-    <div class="five columns">
-=======
-
-    <div class="four columns">
-      <%= image_tag @user.image.url(:medium) %>
-    </div>
-
-<!--user info div -->
-
-  <div class="eight columns">
-    <div class="offset-by-two six columns">
-    </div>
-    <div class="three columns">
->>>>>>> master
-        <p><b>Username: </b><%= @user.username %></p>
-        <p><b>Location: </b><%= @user.location %></p>
-        <p><b>Email: </b><%= @user.email %></p>
-<!-- edit profile button -->
-        <div class="button">
-            <%= link_to "Edit Profile", edit_path(@user) %>
+    <div class="eight columns offset-by-five">
+            <div class="button button-primary" id="editbutton">
+                <%= link_to "Edit Profile", edit_path(@user) %>
+            </div>
         </div>
-    </div>
+</div>
 
-    <div class="five columns">
-    </div>
-  </div>
+</div>
+
 
 
 <!--user post div -->

@@ -150,14 +150,7 @@
    height: 100%;
  }
 
-<<<<<<< HEAD
- #post-buttons {
-  margin: 0;
-  display: absolute;
-  padding: 0;
- }
 
-=======
  #cityshow {
 /*  background: url("<%= @city.image_url %>");*/
   background-repeat: no-repeat;
@@ -182,5 +175,12 @@
 
  }
 
+#editbutton a {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
 
->>>>>>> master
+#explore a {
+  color: white;
+}
