@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   # edit form for posts
   # get "/cities/:id/edit", to: "posts#edit", as: "post_edit"
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
+  # post "/posts/:id/edit", to: "posts#edit", as: "postss_edit"
 
   patch "/posts/:id", to: "posts#update", as: "post_update"
   delete "/posts/:id/delete", to: "posts#destroy", as: "delete"

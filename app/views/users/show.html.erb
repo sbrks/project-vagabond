@@ -1,32 +1,45 @@
 <!-- app/views/users/show.html.erb -->
-<head></head>
-<div class="container">
-<h1>Welcome, <%= link_to @user.username %></h1>
- <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
-<!-- edit profile button -->
-<div class="button">
-<%= link_to "Edit Profile", edit_path(@user) %>
-</div>
+
+
+<div class="container-fluid">
+
+
+<section class="hero">
+    <div class="row" style="text-align:center">
+        <h1 style="margin:0">Welcome, <%= link_to @user.username %></h1>
+
+        <h5> Subject Born <%= @user.created_at.strftime ("%A, %B %d, %Y") %> in <%= @user.location %></h5>
+        </div>
+</section>
+
+
+<div class="container six rows">
+        <div class="row" style="text-align:center">
+            <div class="button button-primary" id="explore"><a href="/cities">Start Exploring</a></div>
+        </div>
+    </div>
+
+</div><br>
+
+
 <!--user photo div -->
  <div class="row">
 
-    <div class="four columns">
-      <%= image_tag @user.image.url(:medium) %>
-    </div>
+       <div class="eight columns offset-by-four">
+            <%= image_tag @user.image.url(:medium) %>
+</div>
 
-<!--user info div -->
+<div class="row">
+    <div class="eight columns offset-by-five">
+            <div class="button button-primary" id="editbutton">
+                <%= link_to "Edit Profile", edit_path(@user) %>
+            </div>
+        </div>
+</div>
 
-  <div class="eight columns">
-    <div class="offset-by-two six columns">
-    </div>
-    <div class="three columns">
-        <p><b>Username: </b><%= @user.username %></p>
-        <p><b>Location: </b><%= @user.location %></p>
-        <p><b>Email: </b><%= @user.email %></p>
-    </div>
-    <div class="five columns">
-    </div>
-  </div>
+</div>
+
+
 
 <!--user post div -->
  <%= render "posts" %>

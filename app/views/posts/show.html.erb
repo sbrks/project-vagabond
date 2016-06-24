@@ -16,8 +16,7 @@
    <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
    <p><%= post.description %> </p>
 
-   <a href="/posts/<%= post.id %>/edit">NEEWWW LIIINK</a>
-   <%= link_to "Edit Post", post_edit_path%>
+   <a href="/posts/<%= post.id %>/edit">Edit Post</a>
    <% end %>
 
 <section  style="text-align: center">

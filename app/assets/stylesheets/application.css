@@ -64,7 +64,11 @@
    margin-left: 0;
  }
  .trash-btn {
-   background-color: red;
+    background-color: white;
+  color: #B22222;
+   margin: 0;
+   display: inline-block;
+  vertical-align: bottom;
  }
 
 
@@ -144,12 +148,14 @@
    height: 100%;
  }
 
+
  #posts {
    background-repeat: no-repeat;
    background-position: center;
    background-attachment: scroll;
    background-size: cover;
- }
+
+
 
 
  .sigil-size {
@@ -163,6 +169,7 @@
  #westeros2 {
   position: absolute;
   left: 26%;
+<<<<<<< HEAD
   margin-top: -195%;
   max-width: 64%
 
@@ -190,4 +197,16 @@
   text-align: center;
   color: black;
   margin-top: 10%;
+}
+
+#editbutton a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+#explore a {
+  color: white;
+  text-decoration: none;
 }
