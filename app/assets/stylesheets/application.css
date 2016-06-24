@@ -25,6 +25,18 @@
  #row {
    display: block;
  }
+ .alert-error {
+   width: 100%;
+   align-items: center;
+   background-color: rgba(236, 69, 57, 0.64);
+ }
+ .alert-success {
+   width: 100%;
+   align-items: center;
+   background-color: rgba(95, 228, 95, 0.57);
+   color: #fff;
+ }
+
  .logo-container {
    position: fixed;
    left: 10%;
@@ -122,4 +134,3 @@
    width: 100%;
    height: 100%;
  }
-

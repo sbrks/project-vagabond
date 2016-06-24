@@ -47,13 +47,14 @@ class UsersController < ApplicationController
     @posts = Post.all
     render :show
 	end
+  
   # delete from profile page
   def destroy
-
     ben = Post.find(params[:id])
     ben.destroy
     redirect_to :back
   end
+
 	#edit user profile
 	def edit
 		@user = User.find(params[:id])
