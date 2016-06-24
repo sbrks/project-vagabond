@@ -9,11 +9,9 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 <div class="container">
 <div class="row" style="text-align:center">
 <h1>Welcome, <%= link_to @user.username %></h1>
- <h5> Subject Born <%= @user.created_at.strftime ("%A, %m/%d/%Y") %></h5>
-<!-- edit profile button -->
-<div class="button">
-<%= link_to "Edit Profile", edit_path(@user) %>
-</div>
+ <h5> Subject Born <%= @user.created_at.strftime ("%A, %B %d, %Y") %></h5>
+
+
 </div>
 <br>
 
@@ -38,7 +36,12 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
         <p><b>Username: </b><%= @user.username %></p>
         <p><b>Location: </b><%= @user.location %></p>
         <p><b>Email: </b><%= @user.email %></p>
+<!-- edit profile button -->
+        <div class="button">
+            <%= link_to "Edit Profile", edit_path(@user) %>
+        </div>
     </div>
+
 </div>
 
 <!-- <div class="row">
