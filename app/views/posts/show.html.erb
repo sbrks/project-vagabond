@@ -1,10 +1,16 @@
+<section id="posts" style="background-image:url('<%= @city.image_url %>')">
 <div class="container">
- <h1><%= @city.name %></h1>
-   <h3 style="text-align: center"><div class="button">
+  <div class="row">
+ <h1 id="citytitle"><%= @city.name %></h1>
+   <h3 style="text-align: center" id="postshow"><div class="button">
         <%= link_to "Add New Post", new_post_path%>
-    </div></h3>
+    </h3></div>
+  </div>
+</div>
+</section>
 
-
+<div class="container">
+  <div class="row">
    <% @posts.each do |post| %>
     <% ben = post.city_id %>
     <% user_id = post.user_id %>
@@ -18,5 +24,4 @@
      <a href="/posts/<%= post.id %>/edit">Edit Post</a>
      <% end %>
    <% end %>
-
 </div>

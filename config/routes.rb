@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   #view posts in city profile
   get "/cities/:id", to: "posts#show"
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
+  # post "/posts/:id/edit", to: "posts#edit", as: "postss_edit"
 
   patch "/posts/:id", to: "posts#update", as: "post_update"
   delete "/posts/:id/delete", to: "posts#destroy", as: "delete"
