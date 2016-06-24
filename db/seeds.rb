@@ -11,6 +11,7 @@ City.destroy_all
 
 cities = City.create([
 
+
 	{ id: 1, name: 'Gulltown', image_url: 'http://awoiaf.westeros.org/images/thumb/8/8d/TN-The_Vale_of_Arryn.jpg/800px-TN-The_Vale_of_Arryn.jpg', sigil_image: 'House-Arryn-Main-Shield.png'},
 	{ id: 2, name: 'Volantis', image_url: 'http://vignette2.wikia.nocookie.net/gameofthrones/images/8/8d/Volantis_5x03_(1).jpg/revision/latest?cb=20150427111331'},
 	{ id: 3, name: 'Meereen', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/8/89/Meereen.png/revision/latest?cb=20150328211743'},
