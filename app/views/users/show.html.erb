@@ -1,9 +1,4 @@
 <!-- app/views/users/show.html.erb -->
-<head><script>
-UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
-</script>
-</head>
-
 
 
 <div class="container">
@@ -17,6 +12,7 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 
 <!--user photo div -->
  <div class="row">
+<<<<<<< HEAD
     <div class="five columns">
         <img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
         <div id="button submit">
@@ -33,6 +29,19 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 <!--user info div -->
 <div class="row">
     <div class="five columns">
+=======
+
+    <div class="four columns">
+      <%= image_tag @user.image.url(:medium) %>
+    </div>
+
+<!--user info div -->
+
+  <div class="eight columns">
+    <div class="offset-by-two six columns">
+    </div>
+    <div class="three columns">
+>>>>>>> master
         <p><b>Username: </b><%= @user.username %></p>
         <p><b>Location: </b><%= @user.location %></p>
         <p><b>Email: </b><%= @user.email %></p>
@@ -42,15 +51,10 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
         </div>
     </div>
 
-</div>
-
-<!-- <div class="row">
-    <div class="two columns">
-      <h5>About Me!</h5>
-      <p>
-        User can add somthing here if they would like!
-      </p>
+    <div class="five columns">
     </div>
-</div> -->
+  </div>
+
+
 <!--user post div -->
  <%= render "posts" %>
