@@ -127,6 +127,14 @@
    left: 1%;
  }
 
+ #section2 {
+   background-image: url('https://s-media-cache-ak0.pinimg.com/736x/22/3c/bb/223cbbb1e32b9880be539e8027568e1e.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: cover;
+ }
+
  #city-container {
    margin: auto;
    top: 0;

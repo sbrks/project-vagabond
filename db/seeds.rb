@@ -28,3 +28,6 @@ cities = City.create([
 	{ id: 15, name: 'Riverrun', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'},
 	{ id: 16, name: 'Pyke', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
 	{ id: 17, name: 'Sunspear', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'}])
+
+
+	
