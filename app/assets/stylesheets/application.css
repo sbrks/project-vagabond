@@ -72,8 +72,6 @@
  }
 
 
-
-
  h4 {
    margin-top: 0;
    margin-bottom: 2rem;
@@ -152,7 +150,6 @@
 
 
  #cityshow {
-/*  background: url("<%= @city.image_url %>");*/
   background-repeat: no-repeat;
   display: inline-block;
   width: 50%;
@@ -179,8 +176,10 @@
   position: relative;
   display: inline-block;
   color: white;
+  text-decoration: none;
 }
 
 #explore a {
   color: white;
+  text-decoration: none;
 }
