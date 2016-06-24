@@ -36,6 +36,14 @@
    background-color: rgba(95, 228, 95, 0.57);
    color: #fff;
  }
+ .profile-posts {
+   padding-top: 50px;
+ }
+ #profile-posts {
+   background-color: rgba(236, 69, 57, 0.64);
+   height: 100px;
+   width: 70%;
+ }
 
  .logo-container {
    position: fixed;
