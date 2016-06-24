@@ -37,11 +37,12 @@ Rails.application.routes.draw do
   get "/cities/:id", to: "posts#show"
 
 
-  # post "/cities/:id/posts", to: "posts#create"
+  #post "/cities/:id/posts", to: "posts#create"
 
-  get "/posts/:id", to: "posts#show"
+  # get "/posts/:id", to: "posts#show"
 
   # edit form for posts
+  # get "/cities/:id/edit", to: "posts#edit", as: "post_edit"
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
 
   patch "/posts/:id", to: "posts#update", as: "post_update"
