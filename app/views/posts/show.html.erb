@@ -1,10 +1,16 @@
+<section id="posts" style="background-image:url('<%= @city.image_url %>')">
 <div class="container">
- <h1><%= @city.name %></h1>
-   <h3 style="text-align: center"><div class="button">
+  <div class="row">
+ <h1 id="citytitle"><%= @city.name %></h1>
+   <h3 style="text-align: center" id="postshow"><div class="button">
         <%= link_to "Add New Post", new_post_path%>
-    </div></h3>
+    </h3></div>
+  </div>
+</div>
+</section>
 
-
+<div class="container">
+  <div class="row">
    <% @posts.each do |post| %>
    <h3 style="padding: 0px"><%= post.title %></h3>
    <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
