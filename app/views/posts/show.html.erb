@@ -12,19 +12,16 @@
 <div class="container">
   <div class="row">
    <% @posts.each do |post| %>
-   <h3 style="padding: 0px"><%= post.title %></h3>
-   <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
-   <p><%= post.description %> </p>
-
-   <a href="/posts/<%= post.id %>/edit">Edit Post</a>
+    <% ben = post.city_id %>
+    <% user_id = post.user_id %>
+    <% @benben = User.find(user_id) %>
+    <% if ben == @city.id %>
+      <a href="/users/<%= user_id %>"><%= image_tag @benben.image.url(:medium) %></a>
+     <h3 style="padding: 0px"><%= post.title %></h3>
+     <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %>
+      <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
+       <p><%= post.description %> </p>
+     <a href="/posts/<%= post.id %>/edit">Edit Post</a>
+     <% end %>
    <% end %>
-
-<section  style="text-align: center">
-  <div class="button" >
-    <a href="/posts/#{post.id}/edit"></a>
-        <%= link_to "Add New Post", new_post_path%>
-    </div>
-</section>
-
-
 </div>

@@ -1,16 +1,45 @@
 <!-- app/views/users/show.html.erb -->
 
+<head></head>
+<div class="container">
+  <% if current_user.id === @user.id %>
+  <h1>Welcome, <%= link_to @user.username %></h1>
+    <div class="offset-by-two columns">
+      <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
+    </div>
+  <% else %>
+    <div>
+      <h1><%= @user.username %>'s Profile</h1>
+    </div>
+<% end %>
+<!--user photo div -->
+ <div class="row offset-by-two columns" id="profile-top-row">
+  <div class="four columns">
+    <% if current_user.id === @user.id %>
+    <a href="/users/<%= @user.id %>/edit">
+    <% end %>
+      <%= image_tag @user.image.url(:medium), id: "profile-img" %>
+    </a>
+  </div>
+<!--user info div -->
+  <div class="row eight columns">
+      <p><b>Username: </b><%= @user.username %></p>
+      <p><b>Location: </b><%= @user.location %></p>
+      <p><b>Email: </b><%= @user.email %></p>
+  </div>
+<!-- edit profile button -->
+  <% if current_user.id === @user.id %>
+  <div class="eight columns">
+    <div class="row">
+      <%= link_to "Edit Profile", edit_path(@user), class: "button" %>
+      <%= link_to "Towns & Fortresses", cities_path, class: "button"%>
+    </div>
+    <% end %>
+  </div>
+</div>
+
 
 <div class="container-fluid">
-
-
-<section class="hero">
-    <div class="row" style="text-align:center">
-        <h1 style="margin:0">Welcome, <%= link_to @user.username %></h1>
-
-        <h5> Subject Born <%= @user.created_at.strftime ("%A, %B %d, %Y") %> in <%= @user.location %></h5>
-        </div>
-</section>
 
 
 <div class="container six rows">
@@ -22,24 +51,25 @@
 </div><br>
 
 
-<!--user photo div -->
- <div class="row">
-
-       <div class="eight columns offset-by-four">
-            <%= image_tag @user.image.url(:medium) %>
-</div>
-
-<div class="row">
-    <div class="eight columns offset-by-five">
-            <div class="button button-primary" id="editbutton">
-                <%= link_to "Edit Profile", edit_path(@user) %>
-            </div>
-        </div>
-</div>
-
-</div>
-
-
-
 <!--user post div -->
- <%= render "posts" %>
+<div class="twelve columns profile-posts">
+  <% @posts.each do |post| %>
+    <% if post.user_id == @user.id %>
+    <div class="row">
+      <div class="two columns button" id="check-city">
+        <a href="/cities/<%= post.city_id %>">Check City</a>
+      </div>
+      <div class="container six columns" id="profile-posts">
+        <div class="nine columns">
+          <h5 id="post-title">Title: <%= post.title %></h5>
+          <p id="post-description">Description: <%= post.description %></p>
+        </div>
+        <% if current_user.id === @user.id %>
+        <div class="two columns" id="post-buttons">
+          <%= button_to "Delete", {:controller => :posts, :action => 'destroy', :id => post.id }, :method => :delete, :class => "trash-btn" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
