@@ -32,13 +32,14 @@
 <div class="twelve columns profile-posts">
   <% @posts.each do |post| %>
     <% if post.user_id == @user.id %>
-      <div class="offset-by-two six columns" id="profile-posts">
-        Title: <%= post.title %> Description: <%= post.description %> <%= post.user_id %>
-      </div>
-      <div class="three columns" id="post-buttons">
-        <%= button_to "Delete", {:controller => :posts, :action => 'destroy', :id => post.id }, :method => :delete, :class => "trash-btn" %>
-        <!-- add link button to post/city show page -->
-          <!-- <img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Trash01-128.png" alt="trash-icon" height=25px width=25px /> -->
+      <div class="container offset-by-two six columns" id="profile-posts">
+        <div class="nine columns">
+          <h5 id="post-title">Title: <%= post.title %></h5>
+          <p id="post-description">Description: <%= post.description %></p>
+        </div>
+        <div class="two columns" id="post-buttons">
+          <%= button_to "Delete", {:controller => :posts, :action => 'destroy', :id => post.id }, :method => :delete, :class => "trash-btn" %>
+        </div>
       </div>
     <% end %>
   <% end %>

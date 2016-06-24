@@ -40,9 +40,20 @@
    padding-top: 50px;
  }
  #profile-posts {
+   margin-top: 25px;
    background-color: rgba(236, 69, 57, 0.64);
    height: 100px;
    width: 70%;
+ }
+ #post-buttons {
+   padding-top: 25px;
+ }
+ #post-title {
+   margin-left: 10px;
+   margin-top: 10px;
+ }
+ #post-description {
+   margin-left: 10px;
  }
 
  .logo-container {
