@@ -1,13 +1,29 @@
+<section>
 <div class="container">
-
+<div class="row">
+<div class="12 columns" style="display: inline;">
 <a href="http://fontmeme.com/game-of-thrones-font/"><img src="http://fontmeme.com/embed.php?text=Towns%20and%20fortresses&name=Game of Thrones.ttf&size=10&style_color=15155E" alt="Game of Thrones Font"></a>
 </div>
-<section id="section2">
- <div class="section hero">
-   <div class="container">
+
+<div>
+
+	<% @cities.each do | city | %>
+		<div class="two columns">
+			<a href="/cities/<%= city.id %>">
+			 <%= image_tag(city.sigil_image,class: "sigil-size")%>
+			</a>
+			<a href="/cities/<%= city.id %>">
+		  <h3 id="city-font"><%= city.name %></h3></a>
+    </div>
+    <br>
+	<% end %>
+
+</div>
+ <div>
+   <div>
      <div class="row group" id="winter">
-       <div class="8 columns" id="stark">
-         <img src="/assets/westeros.jpg" alt="" usemap="#Map" id="westeros" />
+       <div class="three-fourths column" id="stark">
+         <img src="/assets/westeros.jpg" alt="" usemap="#Map" id="westeros2" />
          <map name="Map" id="Map">
          <area alt="" title="Gulltown" href="/cities/1" shape="poly" coords="220,257,181,257,179,287,220,289" />
          <area alt="" title="Volantis" href="/cities/2" shape="poly" coords="376,376,321,375,320,420,370,425" />
@@ -26,13 +42,10 @@
           <area alt="" title="Pyke" href="/cities/15" shape="poly" coords="104,232,47,226,54,250,99,250" />
           <area alt="" title="Sunspear" href="/cities/16" shape="poly" coords="266,419,178,420,183,454,262,446" />
          </map>
-
        </div>
      </div>
    </div>
  </div>
 </section>
-	
-
-
+</div>
 

@@ -34,11 +34,6 @@ gem "paperclip"
 
 gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 
-
-gem 'skrollr-rails', '~> 0.6.29'
-
-gem 'parallax-rails', '~> 1.0'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-byebug'
