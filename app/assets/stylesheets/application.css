@@ -110,7 +110,6 @@
 
  }
 
-
  #section1 {
    background-image: url('http://wallpaper.zone/img/5477621.jpg');
    background-position: center;
@@ -145,18 +144,25 @@
    height: 100%;
  }
 
-
- #cityshow {
-/*  background: url("<%= @city.image_url %>");*/
-  background-repeat: no-repeat;
-  display: inline-block;
-  width: 50%;
-  max-width: 100%;
-  margin: 100%;
- }
  #posts {
    background-repeat: no-repeat;
    background-position: center;
    background-attachment: scroll;
    background-size: cover;
+ }
+
+
+ .sigil-size {
+    max-width: 75%;
+ }
+
+ #city-font {
+    font-size: 1.5em;
+ }
+
+ #westeros2 {
+  position: relative;
+  left: 26%;
+  margin-top: -50%;
+
  }
