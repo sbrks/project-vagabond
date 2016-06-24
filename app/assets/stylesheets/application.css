@@ -106,7 +106,7 @@
    align-items: center;
    margin-top: 33%;
    align-items: center;
-   margin-bottom: 10%;
+   margin-bottom: 3%;
 
  }
 
@@ -153,4 +153,10 @@
   width: 50%;
   max-width: 100%;
   margin: 100%;
+ }
+ #posts {
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: scroll;
+   background-size: cover;
  }
