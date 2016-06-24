@@ -7,7 +7,7 @@
       <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
     </div>
   <% else %>
-    <div class="offset-by-two columns">
+    <div>
       <h1><%= @user.username %>'s Profile</h1>
     </div>
 <% end %>
@@ -21,7 +21,7 @@
     </a>
   </div>
 <!--user info div -->
-  <div class="eight columns">
+  <div class="row eight columns">
       <p><b>Username: </b><%= @user.username %></p>
       <p><b>Location: </b><%= @user.location %></p>
       <p><b>Email: </b><%= @user.email %></p>
