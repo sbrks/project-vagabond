@@ -34,6 +34,7 @@
    position: fixed;
    right: 10%;
    vertical-align: middle;
+   top: 5%;
  }
  .logo-container a {
    text-decoration: none;
@@ -100,18 +101,38 @@
  }
 
  #buttons {
+   position: relative;
+   left: 23%;
    align-items: center;
+   margin-top: 33%;
+   align-items: center;
+   margin-bottom: 10%;
+
  }
 
-
  #section1 {
-   background-image: url('https://duchessinwonderland.files.wordpress.com/2016/02/raven_bird_flying_smoke_black_white_92907_1920x1080.jpg?w=1200');
+   background-image: url('http://wallpaper.zone/img/5477621.jpg');
    background-position: center;
    background-repeat: no-repeat;
    background-attachment: scroll;
    background-size: cover;
  }
 
+ #westeros {
+   max-width: 100%;
+   margin-top: 15%;
+   margin-bottom: 10%;
+   position: relative;
+   left: 1%;
+ }
+
+ #section2 {
+   /*background-image: url('http://hannahbakescakes.co.uk/wp-content/uploads/2015/11/Snow-Falling-Background.gif');*/
+   background-position: center;
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-size: cover;
+ }
 
  #city-container {
    margin: auto;
@@ -122,4 +143,29 @@
    width: 100%;
    height: 100%;
  }
+
+ #cityshow {
+/*  background: url("<%= @city.image_url %>");*/
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 50%;
+  max-width: 100%;
+  margin: 100%;
+ }
+
+ .sigil-size {
+    max-width: 75%;
+ }
+
+ #city-font {
+    font-size: 1.5em;
+ }
+
+ #westeros2 {
+  position: relative;
+  left: 26%;
+  margin-top: -50%;
+
+ }
+
 

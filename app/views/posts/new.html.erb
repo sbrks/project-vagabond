@@ -5,6 +5,7 @@
   <%= form_for :posts do |f| %>
   <%= f.text_field :title, placeholder: "Title" %><br>
   <%= f.text_area :description, placeholder: "Description" %><br>
+  <%= f.hidden_field :city_id, :value => @city.id %>
 
 
 

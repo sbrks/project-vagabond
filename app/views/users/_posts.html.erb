@@ -1,7 +1,7 @@
 <div class="twelve columns">
   <h3><b><center>Recent Posts</center></b></h3>
     <% @posts.each do |post| %>
-      <% if @user_id === post.user_id %>
+      <% if @user_id == post.user_id %>
         <div class="offset-by-two six columns" id="profile-posts">
           Title: <%= post.title %> Description: <%= post.description %> <%= post.user_id %>
         </div>
