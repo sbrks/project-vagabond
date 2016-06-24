@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     @posts = Post.all
     render :show
 	end
-  
+
   # delete from profile page
   def destroy
     ben = Post.find(params[:id])
@@ -65,12 +65,9 @@ class UsersController < ApplicationController
 	#update user profile photo
 	def update
 		@user = User.find(params[:id])
-		if @user.update_attributes(user_params)
+		@user.update_attributes(user_params)
 			flash[:success] = "Profile updated!"
-			# redirect_to @user
-		else
-			render 'edit'
-		end
+			redirect_to @user
 	end
 
 	private
