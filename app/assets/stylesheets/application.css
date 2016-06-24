@@ -64,11 +64,7 @@
    margin-left: 0;
  }
  .trash-btn {
-    background-color: white;
-  color: #B22222;
-   margin: 0;
-   display: inline-block;
-  vertical-align: bottom;
+   background-color: red;
  }
 
 
@@ -148,14 +144,12 @@
    height: 100%;
  }
 
-
  #posts {
    background-repeat: no-repeat;
    background-position: center;
    background-attachment: scroll;
    background-size: cover;
-
-
+ }
 
 
  .sigil-size {
@@ -169,7 +163,6 @@
  #westeros2 {
   position: absolute;
   left: 26%;
-<<<<<<< HEAD
   margin-top: -195%;
   max-width: 64%
 
@@ -187,26 +180,14 @@
   text-align: center;
 }
 #citiesindex {
-  background-image: url('http://unrealitymag.com/wp-content/uploads/2013/06/Sigils-1.jpg');
+  background-image: url('');
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
 }
 #maptitle {
   text-align: center;
   color: black;
   margin-top: 10%;
-}
-
-#editbutton a {
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-}
-
-#explore a {
-  color: white;
-  text-decoration: none;
 }
