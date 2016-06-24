@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 	#renders home page
 	def index
 		@users = User.all
-    @posts = Post.all
+    	@posts = Post.all
 		render :index
 	end
 

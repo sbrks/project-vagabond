@@ -22,18 +22,20 @@ class PostsController < ApplicationController
 
     Post.create(post_params)
 
-    redirect_to "/cities/#{city.id}/posts"
+    redirect_to "/cities/#{city.id}"
   end
 
   def show
     @posts = Post.all
     @city = City.find(params[:id])
+
     render :show
   end
 
   def edit
+    @city_update = City.find(params[:id])
     @post_update = Post.find(params[:id])
-    render :edit
+    render "/posts/edit"
   end
 
   def update
@@ -43,10 +45,11 @@ class PostsController < ApplicationController
       flash[:success] = "Post update!"
 
       city = City.find(params[:id])
-      # redirect_to "/cities/#{city.id}/posts"
+      redirect_to "/cities/#{city.id}"
       # render :index
 
-      redirect_to ("/posts/#{@post_update.id}/edit")
+      # redirect_to ("/posts/#{@post_update.id}/edit")
+
 
     end
   end
