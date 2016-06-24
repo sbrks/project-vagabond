@@ -64,7 +64,11 @@
    margin-left: 0;
  }
  .trash-btn {
-   background-color: red;
+    background-color: white;
+  color: #B22222;
+   margin: 0;
+   display: inline-block;
+  vertical-align: bottom;
  }
 
 
@@ -144,8 +148,8 @@
    height: 100%;
  }
 
+
  #cityshow {
-/*  background: url("<%= @city.image_url %>");*/
   background-repeat: no-repeat;
   display: inline-block;
   width: 50%;
@@ -168,4 +172,14 @@
 
  }
 
+#editbutton a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
 
+#explore a {
+  color: white;
+  text-decoration: none;
+}
