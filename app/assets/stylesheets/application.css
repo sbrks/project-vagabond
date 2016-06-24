@@ -37,23 +37,42 @@
    color: #fff;
  }
  .profile-posts {
-   padding-top: 50px;
+   padding-top: 25px;
+   border-radius: 10px;
  }
  #profile-posts {
-   margin-top: 25px;
+   margin-bottom: 25px;
+   border-radius: 5px;
    background-color: rgba(236, 69, 57, 0.64);
    height: 100px;
    width: 70%;
  }
+ #profile-img {
+   border-radius: 5px;
+ }
  #post-buttons {
-   padding-top: 25px;
+   padding-top: 30px;
  }
  #post-title {
+   color: black;
    margin-left: 10px;
    margin-top: 10px;
  }
  #post-description {
    margin-left: 10px;
+ }
+ #profile-top-row {
+   margin-top: 25px;
+ }
+ .quill {
+   height: 70px;
+   width: 70px;
+   margin-left: 10px;
+   margin-top: 20px;
+ }
+ .thumbnail {
+   height: 150px;
+   width: 150px;
  }
 
  .logo-container {

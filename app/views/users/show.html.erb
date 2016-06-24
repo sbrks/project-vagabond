@@ -1,46 +1,61 @@
 <!-- app/views/users/show.html.erb -->
 <head></head>
 <div class="container">
-<h1>Welcome, <%= link_to @user.username %></h1>
- <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
-<!-- edit profile button -->
-<div class="button">
-<%= link_to "Edit Profile", edit_path(@user) %>
-</div>
+  <% if current_user.id === @user.id %>
+  <h1>Welcome, <%= link_to @user.username %></h1>
+    <div class="offset-by-two columns">
+      <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
+    </div>
+  <% else %>
+    <div class="offset-by-two columns">
+      <h1><%= @user.username %>'s Profile</h1>
+    </div>
+<% end %>
 <!--user photo div -->
- <div class="row">
-
-    <div class="four columns">
-      <%= image_tag @user.image.url(:medium) %>
-    </div>
-
-<!--user info div -->
-
-  <div class="eight columns">
-    <div class="offset-by-two six columns">
-    </div>
-    <div class="three columns">
-        <p><b>Username: </b><%= @user.username %></p>
-        <p><b>Location: </b><%= @user.location %></p>
-        <p><b>Email: </b><%= @user.email %></p>
-    </div>
-    <div class="five columns">
-    </div>
+ <div class="row offset-by-two columns" id="profile-top-row">
+  <div class="four columns">
+    <% if current_user.id === @user.id %>
+    <a href="/users/<%= @user.id %>/edit">
+    <% end %>
+      <%= image_tag @user.image.url(:medium), id: "profile-img" %>
+    </a>
   </div>
+<!--user info div -->
+  <div class="eight columns">
+      <p><b>Username: </b><%= @user.username %></p>
+      <p><b>Location: </b><%= @user.location %></p>
+      <p><b>Email: </b><%= @user.email %></p>
+  </div>
+<!-- edit profile button -->
+  <% if current_user.id === @user.id %>
+  <div class="eight columns">
+    <div class="row">
+      <%= link_to "Edit Profile", edit_path(@user), class: "button" %>
+      <%= link_to "Towns & Fortresses", cities_path, class: "button"%>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 <!--user post div -->
 <div class="twelve columns profile-posts">
   <% @posts.each do |post| %>
     <% if post.user_id == @user.id %>
-      <div class="container offset-by-two six columns" id="profile-posts">
+    <div class="row">
+      <div class="two columns">
+        <a href="/cities/<%= post.city_id %>"><%= image_tag "quill.png", class: "quill" %></a>
+      </div>
+      <div class="container six columns" id="profile-posts">
         <div class="nine columns">
           <h5 id="post-title">Title: <%= post.title %></h5>
           <p id="post-description">Description: <%= post.description %></p>
         </div>
+        <% if current_user.id === @user.id %>
         <div class="two columns" id="post-buttons">
           <%= button_to "Delete", {:controller => :posts, :action => 'destroy', :id => post.id }, :method => :delete, :class => "trash-btn" %>
         </div>
+        <% end %>
       </div>
+    </div>
     <% end %>
   <% end %>
-</div>

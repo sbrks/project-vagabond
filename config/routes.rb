@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
   root to: "users#index"
 
   get "/users/new", to: "users#new"
@@ -28,7 +29,7 @@ Rails.application.routes.draw do
 
   # index of all cities
   #MS and VF working on this route
-  get "/cities", to: "cities#index"
+  get "/cities", to: "cities#index", as: "cities"
   # index of all posts
   get "/posts/index", to: "posts#index"
 
@@ -56,7 +57,7 @@ Rails.application.routes.draw do
 
   # show posts
   get "/posts", to: "posts#show"
-
+  get "/headshot", to: "users#headshot"
 
 
   resources :posts, only: [:new, :create, :show, :index, :edit, :update, :destroy]

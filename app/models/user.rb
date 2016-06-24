@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
 	BCrypt::Engine.cost = 12
 	# paperclip stuffs for ben
-	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100#" }, default_url: "matts-gf.jpg"
+	has_attached_file :image, styles: { medium: "300x300#", thumb: "100x100#" }, default_url: "matts-gf.jpg"
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 	#validations

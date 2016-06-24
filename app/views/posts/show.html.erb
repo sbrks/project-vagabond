@@ -6,20 +6,24 @@
 
 
    <% @posts.each do |post| %>
-   <h3 style="padding: 0px"><%= post.title %></h3>
-   <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
-   <p><%= post.description %> </p>
-
-   <a href="/posts/<%= post.id %>/edit">NEEWWW LIIINK</a>
-   <%= link_to "Edit Post", post_edit_path%>
+    <% if post.city_id == @city.id %>
+     <div class="row">
+      <div class="thumbnail-post two columns">
+       <% ben = post.user_id %>
+       <% benben = User.find(ben) %>
+       <a href="/users/<%= ben %>"><%= image_tag benben.image.url(:thumb), class: "thumbnail" %></a>
+     </div>
+     <div class="offset-by-one eight columns">
+       <h3 style="padding: 0px"><%= post.title %></h3>
+       <p>
+         Posted <%= post.created_at.strftime("%A %m/%d/%Y") %>
+           <strong>|</strong>
+         Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %>
+       </p>
+       <p><%= post.description %></p>
+       <a href="/posts/<%= post.id %>/edit">Edit Post</a><hr>
+     </div>
+   </div>
    <% end %>
-
-<section  style="text-align: center">
-  <div class="button" >
-    <a href="/posts/#{post.id}/edit"></a>
-        <%= link_to "Add New Post", new_post_path%>
-    </div>
-</section>
-
-
+  <% end %>
 </div>
