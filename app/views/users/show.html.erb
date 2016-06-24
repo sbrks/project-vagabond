@@ -3,16 +3,23 @@
 UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 </script>
 </head>
+
+
+
 <div class="container">
+<div class="row" style="text-align:center">
 <h1>Welcome, <%= link_to @user.username %></h1>
- <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
+ <h5> Subject Born <%= @user.created_at.strftime ("%A, %m/%d/%Y") %></h5>
 <!-- edit profile button -->
 <div class="button">
 <%= link_to "Edit Profile", edit_path(@user) %>
 </div>
+</div>
+<br>
+
 <!--user photo div -->
  <div class="row">
-    <div class="four columns">
+    <div class="five columns">
         <img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
         <div id="button submit">
         <%= form_for @user do |form| %>
@@ -23,17 +30,24 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
         </div>
     <% end %>
 </div>
+
+
 <!--user info div -->
-    <div class="three columns">
+<div class="row">
+    <div class="five columns">
         <p><b>Username: </b><%= @user.username %></p>
         <p><b>Location: </b><%= @user.location %></p>
         <p><b>Email: </b><%= @user.email %></p>
     </div>
-    <div class="four columns">
+</div>
+
+<!-- <div class="row">
+    <div class="two columns">
       <h5>About Me!</h5>
       <p>
         User can add somthing here if they would like!
       </p>
     </div>
+</div> -->
 <!--user post div -->
  <%= render "posts" %>

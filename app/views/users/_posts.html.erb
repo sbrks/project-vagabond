@@ -2,11 +2,15 @@
   <h3><b><center>Recent Posts</center></b></h3>
     <% @posts.each do |post| %>
       <% if @user_id === post.user_id %>
+
+      
         <div class="offset-by-two six columns" id="profile-posts">
-          Title: <%= post.title %> Description: <%= post.description %> <%= post.user_id %>
+          Title: <%= link_to post.title%> <br> Description: <%= post.description %> <%= post.user_id %>
         </div>
         <div class="three columns" id="post-buttons">
           <%= button_to "Delete", {:controller => :posts, :action => 'destroy', :id => post.id }, :method => :delete, :class => "trash-btn" %>
+
+          <%= button_to "Edit", {:controller => :posts, :id => post.id }, :method => :edit, :class => "trash-btn" %>
           <!-- add link button to post/city show page -->
             <!-- <img src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Trash01-128.png" alt="trash-icon" height=25px width=25px /> -->
         </div>
