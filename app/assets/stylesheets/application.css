@@ -110,11 +110,11 @@
 
  }
 
- #section1 {
+ #home {
    background-image: url('http://wallpaper.zone/img/5477621.jpg');
    background-position: center;
    background-repeat: no-repeat;
-   background-attachment: scroll;
+   background-attachment: fixed;
    background-size: cover;
  }
 
@@ -127,10 +127,10 @@
  }
 
  #section2 {
-   /*background-image: url('http://hannahbakescakes.co.uk/wp-content/uploads/2015/11/Snow-Falling-Background.gif');*/
-   background-position: center;
+   background-image: url('http://65.media.tumblr.com/e129b186a581ae5932a65089ed6fd3cb/tumblr_mts61dsJmZ1sh566ao1_1280.jpg');
    background-repeat: no-repeat;
-   background-attachment: scroll;
+   background-position: center;
+   background-attachment:fixed;
    background-size: cover;
  }
 
@@ -153,7 +153,7 @@
 
 
  .sigil-size {
-    max-width: 75%;
+    max-width: 22%;
  }
 
  #city-font {
@@ -161,8 +161,33 @@
  }
 
  #westeros2 {
-  position: relative;
+  position: absolute;
   left: 26%;
-  margin-top: -50%;
+  margin-top: -195%;
+  max-width: 64%
 
  }
+#postshow {
+  margin-top: 26%;
+  margin-bottom: 8%;
+}
+#citytitle {
+  color: ghostwhite;
+}
+
+#city {
+  margin-left: -19%;
+  text-align: center;
+}
+#citiesindex {
+  background-image: url('http://unrealitymag.com/wp-content/uploads/2013/06/Sigils-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#maptitle {
+  text-align: center;
+  color: black;
+  margin-top: 10%;
+}

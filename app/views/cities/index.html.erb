@@ -1,28 +1,23 @@
-<section>
-<div class="container">
-<div class="row">
-<div class="12 columns" style="display: inline;">
+<section id="citiesindex">
+	<div class="row group">
+		<div class="twelve columns">
+<nav style="width: 25%;">
+	<br>
 <a href="http://fontmeme.com/game-of-thrones-font/"><img src="http://fontmeme.com/embed.php?text=Towns%20and%20fortresses&name=Game of Thrones.ttf&size=10&style_color=15155E" alt="Game of Thrones Font"></a>
-</div>
-
-<div>
-
+<div class="row" id="city">
 	<% @cities.each do | city | %>
-		<div class="two columns">
 			<a href="/cities/<%= city.id %>">
 			 <%= image_tag(city.sigil_image,class: "sigil-size")%>
 			</a>
 			<a href="/cities/<%= city.id %>">
 		  <h3 id="city-font"><%= city.name %></h3></a>
-    </div>
     <br>
 	<% end %>
-
 </div>
+</nav>
  <div>
    <div>
-     <div class="row group" id="winter">
-       <div class="three-fourths column" id="stark">
+     <div style="margin-left:25%;" id="winter">
          <img src="/assets/westeros.jpg" alt="" usemap="#Map" id="westeros2" />
          <map name="Map" id="Map">
          <area alt="" title="Gulltown" href="/cities/1" shape="poly" coords="220,257,181,257,179,287,220,289" />
@@ -46,6 +41,5 @@
      </div>
    </div>
  </div>
+ </div>
 </section>
-</div>
-
