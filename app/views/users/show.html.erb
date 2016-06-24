@@ -1,8 +1,5 @@
 <!-- app/views/users/show.html.erb -->
-<head><script>
-UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
-</script>
-</head>
+<head></head>
 <div class="container">
 <h1>Welcome, <%= link_to @user.username %></h1>
  <h5> Member since <%= localize(@user.created_at, :format => :long) %></h5>
@@ -12,33 +9,24 @@ UPLOADCARE_PUBLIC_KEY = 'ff1709c2bc4479a0b1d2';
 </div>
 <!--user photo div -->
  <div class="row">
+
     <div class="four columns">
-        <img src="https://getwalls.io/media/thumbs/2015/05/game-of-thrones-bird-95921905.jpg" width="250" height="250">
-<<<<<<< HEAD
+      <%= image_tag @user.image.url(:medium) %>
     </div>
 
-=======
-        <div id="button submit">
-        <%= form_for @user do |form| %>
-        </div>
-        <div id="button upload">
-        <h6>Change Photo
-        <input type="hidden" role="uploadcare-uploader" name="my_file" /></h6>
-        </div>
-    <% end %>
-</div>
->>>>>>> master
 <!--user info div -->
+
+  <div class="eight columns">
+    <div class="offset-by-two six columns">
+    </div>
     <div class="three columns">
         <p><b>Username: </b><%= @user.username %></p>
         <p><b>Location: </b><%= @user.location %></p>
         <p><b>Email: </b><%= @user.email %></p>
     </div>
-    <div class="four columns">
-      <h5>About Me!</h5>
-      <p>
-        User can add somthing here if they would like!
-      </p>
+    <div class="five columns">
     </div>
+  </div>
+
 <!--user post div -->
  <%= render "posts" %>
