@@ -1,25 +1,24 @@
 <div class="container">
-  <h1><%= @city.name %></h1>
-    <h3 style="text-align: center"><div class="button">
-		<%= link_to "Add New Post", new_post_path%>
-	</div></h3>
+ <h1><%= @city.name %></h1>
+   <h3 style="text-align: center"><div class="button">
+        <%= link_to "Add New Post", new_post_path%>
+    </div></h3>
 
 
-    <% @posts.each do |post| %>
-      <% if @city.id === post.city_id %>
-    <h3 style="padding: 0px"><%= post.title %></h3>
-    <p style="padding:0px">Posted by <%= link_to @user.username, :user, method: "GET"  %> on <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
-    <p><%= post.description %> </p>
+   <% @posts.each do |post| %>
+   <h3 style="padding: 0px"><%= post.title %></h3>
+   <p style="padding:0px">Posted <%= post.created_at.strftime("%A %m/%d/%Y") %> <strong>|</strong> Last edited <%= post.updated_at.strftime("%A %m/%d/%Y") %></p><hr>
+   <p><%= post.description %> </p>
 
-
-    <%= link_to "Edit Post", post_edit_path%>
-        <% end %>
-    <% end %>
+   <a href="/posts/<%= post.id %>/edit">NEEWWW LIIINK</a>
+   <%= link_to "Edit Post", post_edit_path%>
+   <% end %>
 
 <section  style="text-align: center">
-   <div class="button" >
-		<%= link_to "Add New Post", new_post_path%>
-	</div>
+  <div class="button" >
+    <a href="/posts/#{post.id}/edit"></a>
+        <%= link_to "Add New Post", new_post_path%>
+    </div>
 </section>
 
 
