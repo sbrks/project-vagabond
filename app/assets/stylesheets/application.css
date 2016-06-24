@@ -25,6 +25,59 @@
  #row {
    display: block;
  }
+ .alert-error {
+   width: 100%;
+   align-items: center;
+   background-color: rgba(236, 69, 57, 0.64);
+ }
+ .alert-success {
+   width: 100%;
+   align-items: center;
+   background-color: rgba(95, 228, 95, 0.57);
+   color: #fff;
+ }
+ .profile-posts {
+   padding-top: 25px;
+   border-radius: 10px;
+ }
+ #profile-posts {
+   margin-bottom: 25px;
+   border-radius: 5px;
+   background-color: rgba(236, 69, 57, 0.64);
+   height: 100px;
+   width: 70%;
+ }
+ #profile-img {
+   border-radius: 5px;
+ }
+ #post-buttons {
+   padding-top: 30px;
+ }
+ #post-title {
+   color: black;
+   margin-left: 10px;
+   margin-top: 10px;
+ }
+ #post-description {
+   margin-left: 10px;
+ }
+ #profile-top-row {
+   margin-top: 25px;
+ }
+ #check-city {
+   margin-top: 25px;
+ }
+ .quill {
+   height: 70px;
+   width: 70px;
+   margin-left: 10px;
+   margin-top: 20px;
+ }
+ .thumbnail {
+   height: 150px;
+   width: 150px;
+ }
+
  .logo-container {
    position: fixed;
    left: 10%;
@@ -144,6 +197,16 @@
    height: 100%;
  }
 
+ #cityshow {
+/*  background: url("<%= @city.image_url %>");*/
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 50%;
+  max-width: 100%;
+  margin: 100%;
+}
+
+
  #posts {
    background-repeat: no-repeat;
    background-position: center;
@@ -163,7 +226,7 @@
  #westeros2 {
   position: absolute;
   left: 26%;
-  margin-top: -195%;
+  margin-top: -155%;
   max-width: 64%
 
  }

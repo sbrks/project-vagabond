@@ -34,14 +34,6 @@ Rails.application.routes.draw do
 
   #view posts in city profile
   get "/cities/:id", to: "posts#show"
-
-
-  #post "/cities/:id/posts", to: "posts#create"
-
-  # get "/posts/:id", to: "posts#show"
-
-  # edit form for posts
-  # get "/cities/:id/edit", to: "posts#edit", as: "post_edit"
   get "/posts/:id/edit", to: "posts#edit", as: "post_edit"
   # post "/posts/:id/edit", to: "posts#edit", as: "postss_edit"
 
@@ -57,7 +49,6 @@ Rails.application.routes.draw do
 
   # show posts
   get "/posts", to: "posts#show"
-
 
 
   resources :posts, only: [:new, :create, :show, :index, :edit, :update, :destroy]
