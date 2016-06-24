@@ -20,14 +20,10 @@ cities = City.create([
 	{ id: 7, name: 'Braavos', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/7/7b/Titan_of_Braavos.jpg/revision/latest/scale-to-width-down/1000?cb=20150504024857'},
 	{ id: 8, name: 'White Harbor', image_url: 'http://vignette3.wikia.nocookie.net/gotrp/images/7/79/White_harbor.jpg/revision/latest?cb=20140914155614'},
 	{ id: 9, name: 'Lannisport', image_url: 'http://static.planetminecraft.com/files/resource_media/screenshot/1227/lannisport_0001_2783518.jpg'},
-	{ id: 10, name: 'Pentos', image_url: 'https://s-media-cache-ak0.pinimg.com/564x/ac/d2/ce/acd2ce9de0c642b1d1115c49b5d3e884.jpg'},
-	{ id: 11, name: 'Astapor', image_url: 'http://vignette1.wikia.nocookie.net/ironthronerp/images/a/a3/Astapor.png/revision/latest?cb=20151023174622'},
-	{ id: 12, name: 'Yunkai', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/5/50/Yunkai.png/revision/latest?cb=20150328212211'},
-	{ id: 13, name: 'Qohor', image_url: 'http://fandomania.com/wp-content/uploads/2011/05/06/Games-of-Thrones-1.03-1.jpg'},
-	{ id: 14, name: 'Storms End', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
-	{ id: 15, name: 'Riverrun', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'},
-	{ id: 16, name: 'Pyke', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
-	{ id: 17, name: 'Sunspear', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'}])
-
-
-	
+	{ id: 10, name: 'Astapor', image_url: 'http://vignette1.wikia.nocookie.net/ironthronerp/images/a/a3/Astapor.png/revision/latest?cb=20151023174622'},
+	{ id: 11, name: 'Yunkai', image_url: 'http://vignette4.wikia.nocookie.net/gameofthrones/images/5/50/Yunkai.png/revision/latest?cb=20150328212211'},
+	{ id: 12, name: 'Qohor', image_url: 'http://fandomania.com/wp-content/uploads/2011/05/06/Games-of-Thrones-1.03-1.jpg'},
+	{ id: 13, name: 'Storms End', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
+	{ id: 14, name: 'Riverrun', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'},
+	{ id: 15, name: 'Pyke', image_url: 'http://awoiaf.westeros.org/images/8/8f/Storm_s_end_by_feliche.jpg'},
+	{ id: 16, name: 'Sunspear', image_url: 'http://awoiaf.westeros.org/images/e/e5/Jedruszek_Riverrun.jpg'}])
